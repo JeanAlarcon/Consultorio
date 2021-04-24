@@ -2,7 +2,7 @@
 function Encabesado(props) {
     if (props.columnas.length === 0) return false;
     return (
-        <thead className="table-dark">
+        <thead className="table-light">
             <tr>
             <th scope="col">#</th>
             

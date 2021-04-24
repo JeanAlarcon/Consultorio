@@ -2,7 +2,7 @@ import "./Pagina.css"
 
 function Inicio() {
     return (
-        <div className="container"> 
+        <div className="container">
             Inicio
         </div>
     )
