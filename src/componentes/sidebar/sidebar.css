@@ -73,6 +73,7 @@
   text-transform: uppercase;
   background-color: #1d85dac0;
   padding: 10px 15px 10px 30px;
+  cursor: pointer;
 }
 
 .sidebar-navigation .header::before {

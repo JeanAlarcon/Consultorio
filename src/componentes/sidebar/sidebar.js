@@ -1,23 +1,34 @@
+import React, { useState } from "react";
 import "./sidebar.css"
 
 function Sidebar() {
+    const [ mostrarCita, setMostrarCita] = useState(true);
+
     return (
       <div class="sidebar-container">
       <div class="sidebar-logo">
         Consultorio
       </div>
       <ul class="sidebar-navigation">
-        <li class="header">Citas</li>
-        <li>
-          <a href="/nuevaCita">
-            <i class="fa fa-home" aria-hidden="true"></i> Nueva Cita
-          </a>
+        <li class="header" onClick={() => setMostrarCita(!mostrarCita)}>
+          
+            Citas
+          
         </li>
-        <li>
-          <a href="/Cita">
-            <i class="fa fa-tachometer" aria-hidden="true"></i> Citas
-          </a>
-        </li>
+        {(mostrarCita ?
+        <ul>
+          <li>
+            <a href="/nuevaCita">
+              <i class="fa fa-home" aria-hidden="true"></i> Nueva Cita
+            </a>
+          </li>
+          <li>
+            <a href="/Cita">
+              <i class="fa fa-tachometer" aria-hidden="true"></i> Citas
+            </a>
+          </li>
+        </ul>
+      : '' )}
         <li class="header">Paciente</li>
         <li>
           <a href="/">

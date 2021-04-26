@@ -1,7 +1,7 @@
 import "./NuevaCita.css"
 
 function NuevaCita(){
-    return(<>
+    return(
         <div class="principal">
             <div class="wrap">
                 <form class="formulario" action="">
@@ -22,16 +22,6 @@ function NuevaCita(){
             </div>
 	    </div>
 
-	<div class="citas">
-		<div class="wrap">
-			<ul class="lista" id="lista">
-				<li><a href="/">Erick Andrade 22 de Abril 14:30</a></li>
-				<li><a href="/">Luis Galicia 22 de Abril 12:30</a></li>
-				<li><a href="/">Rodrigo Duarte 22 de Abril 11:30</a></li>
-			</ul>
-		</div>
-	</div>
-    </>
     )
 }
 

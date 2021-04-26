@@ -1,6 +1,12 @@
-.container {
+.container   {
   justify-content: space-between;
   align-items: center;
   padding-left: 220px;
   display:inline-block;
+  }
+
+.body {
+  background: url(./assets/img/Dentista.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 
 }

@@ -3,6 +3,7 @@
 	height: 65px;
 	padding-left: 220px auto;
 }
+
 .nav-link{
 	padding: 15px 20px;
 }
@@ -15,7 +16,7 @@
 }
 
 body{
-	background: url(./Dentista.jpg);
+	background: url(./logo.jpg);
 	background-repeat: no-repeat;
 	background-size: 100%
 }

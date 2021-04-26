@@ -19,17 +19,16 @@ body {
 }
 
 .principal {
-	background: #E6E6FA;
-	border-top: 10px solid black;
+	background: #fcfcfc;
 	color: black;
-	padding: 50px 0;
+	padding: 50px 300px;
 	width: 100%;
     align-items: center;
 }
 
 .principal .formulario {
 	width: 400px;
-	color: black;
+	color: rgb(5, 5, 5);
 	text-align: center;
 }
 
@@ -37,32 +36,35 @@ body {
 	margin-bottom: 10px;
 	padding: 12px;
 	width: 100%;
+	border-radius: 10px;
 }
 
 .principal .formulario input[type=date] {
 	margin-bottom: 10px;
 	padding: 12px;
 	width: 100%;
+	border-radius: 10px;
 }
 
 .principal .formulario input[type=time] {
 	margin-bottom: 10px;
 	padding: 12px;
 	width: 100%;
+	border-radius: 10px;
 }
 .principal .formulario input[type=text].error {
 	border: 3px solid #00BFFF;
-	color: red;
+	color: black;
 }
 
 .principal .formulario input[type=date].error {
 	border: 3px solid #00BFFF;
-	color: red;
+	color: black;
 }
 
 .principal .formulario input[type=time].error {
 	border: 3px solid #00BFFF;
-	color: red;
+	color: black;
 }
 
 .principal .formulario .boton {
@@ -72,6 +74,7 @@ body {
 	display: inline-block;
 	font-size: 16px;
 	padding: 15px;
+	border-radius: 10px;
 }
 
 .principal .formulario .boton:hover {
@@ -84,7 +87,7 @@ body {
 }
 
 .citas .lista li {
-	border-bottom: 1px solid #B6B6B6;
+	border-bottom: 3px solid #B6B6B6;
 }
 
 .citas .lista li a {
@@ -95,6 +98,6 @@ body {
 }
 
 .citas .lista li a:hover {
-	text-decoration: underline red;
+	text-decoration: underline rgb(22, 117, 161);
 
 }
