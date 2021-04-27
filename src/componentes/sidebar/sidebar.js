@@ -5,12 +5,12 @@ function Sidebar() {
     const [ mostrarCita, setMostrarCita] = useState(true);
 
     return (
-      <div class="sidebar-container">
-      <div class="sidebar-logo">
+      <div className="sidebar-container">
+      <div className="sidebar-logo">
         Consultorio
       </div>
-      <ul class="sidebar-navigation">
-        <li class="header" onClick={() => setMostrarCita(!mostrarCita)}>
+      <ul className="sidebar-navigation">
+        <li className="header" onClick={() => setMostrarCita(!mostrarCita)}>
           
             Citas
           
@@ -19,30 +19,30 @@ function Sidebar() {
         <ul>
           <li>
             <a href="/nuevaCita">
-              <i class="fa fa-home" aria-hidden="true"></i> Nueva Cita
+              <i className="fa fa-home" aria-hidden="true"></i> Nueva Cita
             </a>
           </li>
           <li>
             <a href="/Cita">
-              <i class="fa fa-tachometer" aria-hidden="true"></i> Citas
+              <i className="fa fa-tachometer" aria-hidden="true"></i> Citas
             </a>
           </li>
         </ul>
       : '' )}
-        <li class="header">Paciente</li>
+        <li className="header">Paciente</li>
         <li>
           <a href="/">
-            <i class="fa fa-users" aria-hidden="true"></i> Nuevo Paciente
+            <i className="fa fa-users" aria-hidden="true"></i> Nuevo Paciente
           </a>
         </li>
         <li>
           <a href="/Pacientes">
-            <i class="fa fa-cog" aria-hidden="true"></i> Pacientes
+            <i className="fa fa-cog" aria-hidden="true"></i> Pacientes
           </a>
         </li>
         <li>
           <a href="/">
-            <i class="fa fa-info-circle" aria-hidden="true"></i> Information
+            <i className="fa fa-info-circle" aria-hidden="true"></i> Information
           </a>
         </li>
       </ul>

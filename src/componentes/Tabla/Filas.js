@@ -1,13 +1,12 @@
-function Filas({consulta,index}){
+function Filas({fila,index,columnas}){
     return(<tr>
     <th scope="row">{index}</th>
-        <td>{consulta.nombre}</td>
-        <td>{consulta.cliente}</td>
-        <td>{consulta.diagnostico}</td>
+    {columnas.map((columna) =><td> {fila[columna]} </td>)}
+        
         <td>
             <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn-editar" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Editar</button>
-                <button type="button" class="btn-eliminar">Eliminar</button>
+                <button type="button" className="btn-editar" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Editar</button>
+                <button type="button" className="btn-eliminar">Eliminar</button>
             </div>
         </td>
         </tr>)

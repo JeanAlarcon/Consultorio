@@ -9,7 +9,7 @@ function NavBoost() {
         
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
-                <a class="navbar-logo" href="/" >
+                <a className="navbar-logo" href="/" >
                     <img src={logo} />
                 </a>
               <li className="nav-item">

@@ -21,11 +21,11 @@ function App() {
           <Switch>
             <Route path='/' exact component={Inicio} />
             <Route path='/Cita' exact component={(props) => (
-            <Pagina {...props} titulo="Citas" entidad="Citas" />
+            <Pagina {...props} titulo="Citas" entidad="citas" />
           )} />
 
             <Route path='/Pacientes' exact component={(props) => (
-            <Pagina {...props} titulo="Pacientes" entidad="Pacientes" />
+            <Pagina {...props} titulo="Pacientes" entidad="pacientes" />
           )} />
             <Route path='/nuevaCita' exact component={citaForm} />
           </Switch>
