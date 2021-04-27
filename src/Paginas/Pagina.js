@@ -3,19 +3,13 @@ import { Component } from "react";
 import "./Pagina.css"
 
 class Pagina extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            mostramodal : false,
-        }
-    }
-
 
     render() {
+        const {titulo = ''}= this.props;
         return (
             <>
             <div class="container">
-                <Tabla />  
+                <Tabla titulo={titulo} />  
             </div>
             </>
     

@@ -1,3 +1,17 @@
 .tabla{
     justify-content: center;
 }
+
+.btn-editar {
+    background-color: blanchedalmond;
+    border-radius: 5px;
+    font-family: Roboto, sans-serif;
+    padding: 4px 18px;
+}
+
+.btn-eliminar {
+    background-color: rgb(250, 125, 244);
+    border-radius: 5px;
+    font-family: Roboto, sans-serif;
+    padding: 4px 18px;
+}

@@ -20,8 +20,13 @@ function App() {
           <NavBoost/>
           <Switch>
             <Route path='/' exact component={Inicio} />
-            <Route path='/Cita' exact component={Pagina} />
-            <Route path='/Pacientes' exact component={Pacientes} />
+            <Route path='/Cita' exact component={(props) => (
+            <Pagina {...props} titulo="Citas" entidad="Citas" />
+          )} />
+
+            <Route path='/Pacientes' exact component={(props) => (
+            <Pagina {...props} titulo="Pacientes" entidad="Pacientes" />
+          )} />
             <Route path='/nuevaCita' exact component={citaForm} />
           </Switch>
         </div>

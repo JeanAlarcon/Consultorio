@@ -1,10 +1,8 @@
 import "./Nav.css"
 import logo from "./logo.jpg"
-import React, { useState } from "react";
+
 
 function NavBoost() {
-  const [ mostrarMenu, setMostrarMenu] = useState(true);
-
     return(
         <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light bg-light ">
@@ -20,27 +18,11 @@ function NavBoost() {
 
 
               <li className="nav-item">
-                <a className="nav-link " href="/" onClick={() => setMostrarMenu(!mostrarMenu)}>
+                <a className="nav-link " href="/" >
                   Especialidades
                 </a>
               </li>
-              {mostrarMenu ?
 
-              <ul class="submenu">
-                <li>
-                                <a href="/">Ortodoncia</a>
-                            </li>
-                <li>
-                                <a href="/">Cirugías</a>
-                            </li>
-                <li>
-                                <a href="/">Endodoncias</a>
-                                </li>
-                <li>
-                                <a href="/">Blanqueamiento</a>
-                            </li>
-              </ul>
-              : '' }
               <li className="nav-item">
                 <a className="nav-link" href="/">Registrar cita</a>
               </li>
