@@ -8,15 +8,15 @@ function Tabla({titulo, entidad, columnas = [], filas=[]}) {
   
 
   return (<div className="tabla">
-  <ActionsMenu titulo={titulo}/>
-    <table className="table table-striped">
-      <Encabesado columnas={columnas} />
-        <tbody id="lista-consultas">
-        {filas.map((fila,index) =>
-          <Filas fila={fila} index= {index} columnas={columnas} />
-        )}
-      </tbody>
-  </table>
+    <ActionsMenu titulo={titulo}/>
+      <table className="table table-striped">
+        <Encabesado columnas={columnas} />
+          <tbody id="lista-consultas">
+            {filas.map((fila,index) =>
+              <Filas fila={fila} index= {index} columnas={columnas} />
+            )}
+          </tbody>
+      </table>
 </div>)
 }
 

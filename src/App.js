@@ -3,7 +3,6 @@ import NavBoost from "./componentes/Navbar/NavBoost";
 
 import Pagina from "./Paginas/Pagina";
 import Inicio from "./Paginas/Inicio";
-import Pacientes from "./Paginas/Pacientes";
 import citaForm from "./Paginas/CitaForm";
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -16,7 +15,7 @@ function App() {
   <>
     <Router>
       <Sidebar/>
-        <div className="container">
+        <div className="main">
           <NavBoost/>
           <Switch>
             <Route path='/' exact component={Inicio} />

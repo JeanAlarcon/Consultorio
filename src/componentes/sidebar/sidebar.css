@@ -16,7 +16,8 @@
 .sidebar-logo {
   padding: 10px 15px 10px 30px;
   font-size: 20px;
-  background-color: #1462aa;
+  /*background-color: #1462aa;*/
+  background-color: #db51db;
 }
 
 .sidebar-navigation {
@@ -52,7 +53,8 @@
 }
 
 .sidebar-navigation li::before {
-  background-color: #397fc5;
+  /*background-color: #397fc5;*/
+  background-color: #ee92e2;
   position: absolute;
   content: '';
   height: 100%;
@@ -71,7 +73,8 @@
 .sidebar-navigation .header {
   font-size: 12px;
   text-transform: uppercase;
-  background-color: #1d85dac0;
+  /*background-color: #1d85dac0;*/
+  background-color: #c52f9f;
   padding: 10px 15px 10px 30px;
   cursor: pointer;
 }

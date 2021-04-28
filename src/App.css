@@ -1,12 +1,24 @@
-.container   {
+.main   {
   justify-content: space-between;
   align-items: center;
-  padding-left: 220px;
+  padding-left: 200px;
   display:inline-block;
+  
 }
 
-.body {
+.maincontainer {
   background: url(./assets/img/Dentista.jpg);
 	background-repeat: no-repeat;
-	background-size: 100% 
+  background-position: center; 
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+body { 
+  background: url(./assets/img/Dentista.jpg) no-repeat   fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

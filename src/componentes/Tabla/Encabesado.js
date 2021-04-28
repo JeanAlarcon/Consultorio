@@ -6,7 +6,7 @@ function Encabesado(props) {
             <tr>
             <th scope="col">#</th>
             
-            {props.columnas.map((columna) => (<th scope="col">{columna}</th>))}
+            {props.columnas.map((columna) => (<th scope="col" key={columna} >{columna}</th>))}
             
             <th scope="col"></th>
             </tr>

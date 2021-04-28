@@ -15,11 +15,6 @@
 	box-sizing: border-box;
 }
 
-body{
-	background: url(./logo.jpg);
-	background-repeat: no-repeat;
-	background-size: 100%
-}
 
 .navbar-logo{
 	display: inline-block;

@@ -10,11 +10,14 @@ class Pagina extends Component {
         const entidades = {
             citas : [
                 {nombre:'Consulta 1',cliente:'Ciente 2',diagnostico:'diagnostico 1'},
-                {nombre:'Consulta 2',cliente:'Cliente 2',diagnostico:'diagnostico 2'}
+                {nombre:'Consulta 2',cliente:'Cliente 2',diagnostico:'diagnostico 2'},
+                {nombre:'Consulta 3',cliente:'Ciente 3',diagnostico:'diagnostico 3'},
+                
             ],
             pacientes : [
                 {nombre:'Paciente 1',apellido:'Apellido 1',email:'email@mail.com'},
-                {nombre:'Paciente 2',apellido:'Apellido 2',email:'email2@mail.com'}
+                {nombre:'Paciente 2',apellido:'Apellido 2',email:'email2@mail.com'},
+                {nombre:'Paciente 3',apellido:'Apellido 3',email:'email3@mail.com'},
             ],
         };
 
