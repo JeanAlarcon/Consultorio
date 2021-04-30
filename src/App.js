@@ -4,6 +4,8 @@ import NavBoost from "./componentes/Navbar/NavBoost";
 import Pagina from "./Paginas/Pagina";
 import Inicio from "./Paginas/Inicio";
 import citaForm from "./Paginas/CitaForm";
+import PacienteForm from "./Paginas/PacienteForm";
+
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -27,6 +29,8 @@ function App() {
             <Pagina {...props} titulo="Pacientes" entidad="pacientes" />
           )} />
             <Route path='/nuevaCita' exact component={citaForm} />
+            <Route path='/nuevoPaciente' exact component={PacienteForm} />
+
           </Switch>
         </div>
     </Router>

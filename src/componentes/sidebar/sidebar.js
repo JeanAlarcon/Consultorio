@@ -36,7 +36,7 @@ function Sidebar() {
         {(mostrarPaciente ?
           <ul>
             <li>
-              <a href="/">
+              <a href="/nuevoPaciente">
                 <i className="fa fa-users" aria-hidden="true"></i> Nuevo Paciente
               </a>
             </li>
