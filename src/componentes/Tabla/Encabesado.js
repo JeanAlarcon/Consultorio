@@ -4,7 +4,7 @@ function Encabesado(props) {
     return (
         <thead className="table table-primary">
             <tr>
-            <th scope="col">#</th>
+            <th scope="col">Id</th>
             
             {props.columnas.map((columna) => (<th scope="col" key={columna} >{columna}</th>))}
             
