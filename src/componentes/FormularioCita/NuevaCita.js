@@ -11,8 +11,8 @@ function NuevaCita(){
                         id="citaInput" 
                         className = "error" 
                         placeholder="Paciente" 
-                        minlength="5" 
-                        maxlength="40" 
+                        minLength="5" 
+                        maxLength="40" 
                         pattern="[A-Za-z]"
                     />
                     <input type="date" id="fechaInput" className = "error" placeholder="Fecha"/>
