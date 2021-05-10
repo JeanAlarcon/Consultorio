@@ -2,22 +2,22 @@ import "./NuevaCita.css"
 
 function NuevaCita(){
     return(
-        <div class="principal">
-            <div class="wrap">
-                <form class="formulario" action="">
+        <div className="principal">
+            <div className="wrap">
+                <form className="formulario" action="">
                     <h2>Registrar Cita</h2>
                     <input 
                         type="text" 
                         id="citaInput" 
-                        class = "error" 
+                        className = "error" 
                         placeholder="Paciente" 
                         minlength="5" 
                         maxlength="40" 
                         pattern="[A-Za-z]"
                     />
-                    <input type="date" id="fechaInput" class = "error" placeholder="Fecha"/>
-                    <input type="time" id="horaInput" class = "error" placeholder="Hora"/>
-                    <input type="button" class="boton" id="btn-agregar" value="Agregar Cita"/>
+                    <input type="date" id="fechaInput" className = "error" placeholder="Fecha"/>
+                    <input type="time" id="horaInput" className = "error" placeholder="Hora"/>
+                    <input type="button" className="boton" id="btn-agregar" value="Agregar Cita"/>
                 </form>
             </div>
 	    </div>
