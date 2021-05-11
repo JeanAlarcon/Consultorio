@@ -9,6 +9,7 @@ function NuevaCita(){
 
     const validar = (event) => {
         event.preventDefault()
+        
     }
 
     return(
