@@ -7,15 +7,22 @@ function NuevaCita(){
     const [Fecha,setFecha] = useState("");
     const [Hora,setHora] = useState("");
 
-    const validar = (event) => {
+    const addPaciente = (event) => {
         event.preventDefault()
+        if(!Paciente.trim()){
+            console.log('El paciente esta vacio')
+            return
+        }
         
+        
+
     }
+
 
     return(
         <div className="principal">
             <div className="wrap">
-                <form onSubmit={validar} className="formulario" action="">
+                <form onSubmit={addPaciente} className="formulario" action="">
                     <h2>Registrar Cita</h2>
                     <input 
                         type="text" 

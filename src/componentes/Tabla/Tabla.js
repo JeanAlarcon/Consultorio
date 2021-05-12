@@ -1,4 +1,3 @@
-import React,{ useState } from "react"
 import Encabesado from "./Encabesado";
 import Filas from "./Filas";
 import ActionsMenu from "./ActionsMenu";
