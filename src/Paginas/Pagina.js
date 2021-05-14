@@ -9,15 +9,15 @@ class Pagina extends Component {
         const {entidad = ''}= this.props;
         const entidades = {
             citas : [
-                {nombre:'Consulta 1',cliente:'Ciente 2',diagnostico:'diagnostico 1'},
-                {nombre:'Consulta 2',cliente:'Cliente 2',diagnostico:'diagnostico 2'},
-                {nombre:'Consulta 3',cliente:'Ciente 3',diagnostico:'diagnostico 3'},
+                {paciente:'Paciente 1',fecha:'fecha 1',hora:'10:01'},
+                {paciente:'Paciente 2',fecha:'fecha 2',hora:'12:00 '},
+                {paciente:'Paciente 3',fecha:'fecha 3',hora:'13:00'},
                 
             ],
             pacientes : [
-                {nombre:'Paciente 1',apellido:'Apellido 1',email:'email@mail.com'},
-                {nombre:'Paciente 2',apellido:'Apellido 2',email:'email2@mail.com'},
-                {nombre:'Paciente 3',apellido:'Apellido 3',email:'email3@mail.com'},
+                {nombre:'Paciente 1',apellido:'Apellido 1',edad:"20",direccion:'direccion 1',correo:'email@mail.com',telefono:"558462312"},
+                {nombre:'Paciente 2',apellido:'Apellido 2',edad:"30",direccion:'direccion 2',correo:'email2@mail.com',telefono:"5615987463"},
+                {nombre:'Paciente 3',apellido:'Apellido 3',edad:"40",direccion:'direccion 3',correo:'email3@mail.com',telefono:"5510568496"},
             ],
         };
 
