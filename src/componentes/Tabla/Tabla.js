@@ -1,13 +1,12 @@
 import Encabesado from "./Encabesado";
 import Filas from "./Filas";
-import ActionsMenu from "./ActionsMenu";
 import "./Tabla.css"
 
 function Tabla({titulo, entidad, columnas = [], filas=[]}) {
   
 
   return (<div className="tabla">
-    <ActionsMenu titulo={titulo}/>
+    <h1>{titulo}</h1>
       <table className="table table-striped">
         <Encabesado columnas={columnas} />
           <tbody id="lista-consultas">
