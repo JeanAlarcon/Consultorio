@@ -1,5 +1,6 @@
 import "./NuevaCita.css"
 import React, { useState } from "react";
+import {store} from './../../firebaseconfig'
 
 function NuevaCita(){
 
@@ -7,15 +8,28 @@ function NuevaCita(){
     const [Fecha,setFecha] = useState("");
     const [Hora,setHora] = useState("");
 
-    const addPaciente = (event) => {
+    const addPaciente = async (event) => {
         event.preventDefault()
         if(!Paciente.trim()){
             console.log('El paciente esta vacio')
             return
         }
-        
-        
 
+        const cita = {
+            paciente: Paciente,
+            fecha: Fecha,
+            hora: Hora,
+        }
+        
+        try {
+            const data = await store.collection('citas').add(cita)
+            console.log('cita agregada') 
+        } catch (error) {
+            console.log(error)
+        }
+        setPaciente('')
+        setFecha('')
+        setHora('')
     }
 
 
@@ -31,7 +45,7 @@ function NuevaCita(){
                         placeholder="Paciente" 
                         minLength="5" 
                         maxLength="40" 
-                        pattern="[A-Za-z]"
+                        value={Paciente}
                         onChange={(e)=> setPaciente(e.target.value)}
                     />
 
@@ -40,6 +54,7 @@ function NuevaCita(){
                         id="fechaInput" 
                         className= "error" 
                         placeholder="Fecha"
+                        value={Fecha}
                         onChange={(e)=> setFecha(e.target.value)}    
                     />
 
@@ -48,6 +63,7 @@ function NuevaCita(){
                         id="horaInput" 
                         className= "error" 
                         placeholder="Hora"
+                        value={Hora}
                         onChange={(e) => setHora(e.target.value)}
                     />
 
