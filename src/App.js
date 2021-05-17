@@ -2,9 +2,10 @@ import Sidebar from "./componentes/sidebar/sidebar";
 import NavBoost from "./componentes/Navbar/NavBoost";
 
 import Pagina from "./Paginas/Pagina";
-import Inicio from "./Login";
+import Login from "./Login";
 import citaForm from "./Paginas/CitaForm";
 import PacienteForm from "./Paginas/PacienteForm";
+import Inicio from "./Paginas/Inicio";
 
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -20,7 +21,8 @@ function App() {
         <div className="main">
           <NavBoost/>
           <Switch>
-            <Route path='/' exact component={Inicio} />
+            <Route path='/' exact component={Login} />
+            <Route path='/inicio' exact component={Inicio} />
             <Route path='/Cita' exact component={(props) => (
             <Pagina {...props} titulo="Citas" entidad="citas" />
           )} />

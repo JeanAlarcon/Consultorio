@@ -1,8 +1,11 @@
 import "./Login.css"
 import React, { useState } from "react";
 import {auth} from './firebaseconfig'
+import {useHistory} from 'react-router-dom';
 
 function Inicio() {
+    const historia = useHistory()
+
     const [email,setEmail] = useState('');
     const [contrasena,setContrasena] = useState('');
 
@@ -10,7 +13,9 @@ function Inicio() {
         e.preventDefault();
         try {
             auth.signInWithEmailAndPassword(email,contrasena)
-            .then((r)=>console.log(r))
+            .then((r)=>{
+                historia.push('/inicio')
+            })
             .catch((err)=>{
                 console.log(err)
             })
