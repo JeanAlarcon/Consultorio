@@ -1,6 +1,6 @@
-import "./inicio.css"
+import "./Login.css"
 import React, { useState } from "react";
-import {auth} from './../firebaseconfig'
+import {auth} from './firebaseconfig'
 
 function Inicio() {
     const [email,setEmail] = useState('');

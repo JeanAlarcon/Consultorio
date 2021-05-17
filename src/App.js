@@ -2,7 +2,7 @@ import Sidebar from "./componentes/sidebar/sidebar";
 import NavBoost from "./componentes/Navbar/NavBoost";
 
 import Pagina from "./Paginas/Pagina";
-import Inicio from "./Paginas/Inicio";
+import Inicio from "./Login";
 import citaForm from "./Paginas/CitaForm";
 import PacienteForm from "./Paginas/PacienteForm";
 
