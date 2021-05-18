@@ -6,7 +6,6 @@ import { store } from "../firebaseconfig";
 
 function Pagina({titulo, entidad}) {
 
-    const [entidadesf,setEntidadf] = useState([]);
     const [filasf,setFilasf] = useState('');
     const [columnasf, setColumnasf] = useState([]);
     const entidades = {
@@ -28,8 +27,6 @@ function Pagina({titulo, entidad}) {
         const getEntidad = async () => {
             const { docs } = await store.collection(entidad).get()
             const entidadf = docs.map(item =>({id:item.id, ...item.data()}));
-            console.log('arreglo', entidadf)
-            setEntidadf(entidadf)
             setFilasf(entidadf)
             setColumnasf(Object.keys(filas[0]))
         }

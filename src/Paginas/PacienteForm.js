@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import ComponenteInput from './../componentes/Input';
 import "./Pagina.css"
+import {store} from './../firebaseconfig'
 
 
 const App = () => {
@@ -29,7 +30,7 @@ const App = () => {
     cambiarTerminos(e.target.checked);
   }
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
 
     if(
@@ -51,6 +52,23 @@ const App = () => {
       cambiarTerminos(false);
 
       // aqui ponemos el codigo para la base de datos
+      const paciente = {
+        nombre: nombre.campo,
+        apellido: apellido.campo,
+        edad: edad.campo,
+        direccion: direccion.campo,
+        correo: correo.campo,
+        telefono: telefono.campo,
+        terminos: terminos,
+      }
+
+      try {
+        const data = await store.collection('pacientes').add(paciente)
+        console.log('paciente agregado')
+      } catch (error) {
+        console.log(error)
+      }
+
     }else{
       cambiarFormularioValido(false);
     }
