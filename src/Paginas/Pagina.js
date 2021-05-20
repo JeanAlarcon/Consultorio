@@ -6,7 +6,7 @@ import { store } from "../firebaseconfig";
 
 function Pagina({titulo, entidad}) {
 
-    const [filasf,setFilasf] = useState('');
+    const [filasf,setFilasf] = useState([]);
     const [columnasf, setColumnasf] = useState([]);
     const entidades = {
     citas : [
@@ -33,12 +33,12 @@ function Pagina({titulo, entidad}) {
         getEntidad()
     },[])
         
-        
 
     return (
         <>
         <div className="container">
-            <Tabla titulo={titulo} entidad={entidad} columnas={columnasf} filas={filasf} key={entidad}/>
+            {(filasf.length >0 ? <Tabla titulo={titulo} entidad={entidad} columnas={columnasf} filas={filasf} key={entidad}/>
+            :<span>No hay citas que mostrar</span>)}
         </div>
         </>
     
