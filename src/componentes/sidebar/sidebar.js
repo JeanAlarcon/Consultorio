@@ -20,7 +20,7 @@ function Sidebar() {
         <ul>
           <li>
             <NavLink to="/nuevaCita">
-              <i className="fa fa-home" aria-hidden="true" activeClassName="active"></i> Nueva Cita
+              <i className="fa fa-home" aria-hidden="true" activeclassname="active"></i> Nueva Cita
             </NavLink>
           </li>
           <li>
