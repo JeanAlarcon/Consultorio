@@ -33,7 +33,9 @@ function App() {
           )} />
             <Route path='/nuevaCita' exact component={citaForm} />
             <Route path='/nuevoPaciente' exact component={PacienteForm} />
-
+            <Route path="*">
+              <h1>Pagina no encontrada vuelve al Inicio</h1>
+            </Route>
           </Switch>
         </div>
     </Router>
