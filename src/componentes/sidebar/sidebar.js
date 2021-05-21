@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, NavLink } from 'react-router-dom'
 import "./sidebar.css"
 
 function Sidebar() {
@@ -18,14 +19,14 @@ function Sidebar() {
         {(mostrarCita ?
         <ul>
           <li>
-            <a href="/nuevaCita">
-              <i className="fa fa-home" aria-hidden="true"></i> Nueva Cita
-            </a>
+            <NavLink to="/nuevaCita">
+              <i className="fa fa-home" aria-hidden="true" activeClassName="active"></i> Nueva Cita
+            </NavLink>
           </li>
           <li>
-            <a href="/Cita">
+            <NavLink to="/Cita">
               <i className="fa fa-tachometer" aria-hidden="true"></i> Citas
-            </a>
+            </NavLink>
           </li>
         </ul>
       : '' )}
@@ -36,22 +37,22 @@ function Sidebar() {
         {(mostrarPaciente ?
           <ul>
             <li>
-              <a href="/nuevoPaciente">
+              <NavLink to="/nuevoPaciente">
                 <i className="fa fa-users" aria-hidden="true"></i> Nuevo Paciente
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="/Pacientes">
+              <NavLink to="/Pacientes">
                 <i className="fa fa-cog" aria-hidden="true"></i> Pacientes
-              </a>
+              </NavLink>
             </li>
           </ul>
         : '')}
         
         <li>
-          <a href="/">
+          <NavLink exact to="/">
             <i className="fa fa-info-circle" aria-hidden="true"></i> Informacion
-          </a>
+          </NavLink>
         </li>
       </ul>
     </div>

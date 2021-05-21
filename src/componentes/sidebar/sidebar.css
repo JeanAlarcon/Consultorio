@@ -86,3 +86,8 @@
 .content-container {
   padding-left: 220px;
 }
+
+.active {
+  background-color: #ee92e2;
+  color: #fff;
+}
