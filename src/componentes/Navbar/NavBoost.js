@@ -4,7 +4,7 @@ import logo from "./logo.jpg"
 
 function NavBoost() {
     return(
-        <div className="container">
+        <div className="containerNav">
         <nav className="navbar navbar-expand-lg navbar-light bg-light ">
         
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">

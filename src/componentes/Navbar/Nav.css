@@ -3,6 +3,10 @@
 	height: 65px;
 	padding-left: 220px auto;
 }
+.containerNav {
+	padding-left: 80px ;
+
+}
 
 .nav-link{
 	padding: 15px 20px;
