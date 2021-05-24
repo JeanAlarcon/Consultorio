@@ -1,6 +1,8 @@
 import "./Pagina.css"
 import { useEffect, useState } from "react";
 import { store } from "../firebaseconfig";
+import { Link } from 'react-router-dom'
+
 
 function Pacientes({titulo, entidad}) {
     const [filasf,setFilasf] = useState([]);
@@ -18,14 +20,14 @@ function Pacientes({titulo, entidad}) {
         <div className="container">
             <div className="list-group">
                 {filasf.length > 0 ?
-                    filasf.map((fila,index) => <a href="#" className="list-group-item list-group-item-primary" aria-current="true" key={`${index}${fila.nombre}`}>
+                    filasf.map((fila,index) => <Link to={`/Pacientes/${fila.id}`} className="list-group-item list-group-item-danger" aria-current="true" key={`${index}${fila.nombre}`}>
                     <div className="d-flex w-100 justify-content-between">
                     <h5 className="mb-1">{fila.nombre} {fila.apellido}</h5>
                     <small>{index}</small>
                     </div>
                     <p className="mb-1">{fila.correo}</p>
                     <small>{fila.telefono}</small>
-                </a>)  
+                </Link>)  
                 :<span>No hay pacientes que mostrar</span>}
             </div>
         </div>

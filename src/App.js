@@ -3,6 +3,7 @@ import NavBoost from "./componentes/Navbar/NavBoost";
 
 import Pagina from "./Paginas/Pagina";
 import Pacientes from "./Paginas/Pacientes";
+import paciente from "./Paginas/Paciente";
 import Login from "./Login";
 import citaForm from "./Paginas/CitaForm";
 import PacienteForm from "./Paginas/PacienteForm";
@@ -33,6 +34,8 @@ function App() {
           )} />
             <Route path='/nuevaCita' exact component={citaForm} />
             <Route path='/nuevoPaciente' exact component={PacienteForm} />
+            <Route path='/Pacientes/:id' exact component={paciente} />
+
             <Route path="*">
               <h1>Pagina no encontrada vuelve al Inicio</h1>
             </Route>
