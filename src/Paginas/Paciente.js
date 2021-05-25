@@ -37,10 +37,8 @@ function Paciente(){
                                 </p>
                             </div>             
                         </div>            
-                    
-                </div>                 
-		    </div>
-            
+                    </div>                 
+		        </div>
             :<h1>Paciente</h1>}
 	    
     </div>

@@ -2,7 +2,7 @@ import "./Pagina.css"
 import { useEffect, useState } from "react";
 import { store } from "../firebaseconfig";
 import { Link } from 'react-router-dom'
-
+import paciente from './../assets/img/paciente.jpg'
 
 function Pacientes({titulo, entidad}) {
     const [filasf,setFilasf] = useState([]);
@@ -18,16 +18,19 @@ function Pacientes({titulo, entidad}) {
 
     return (
         <div className="container">
-            <div className="list-group">
+            <div className="row">
                 {filasf.length > 0 ?
-                    filasf.map((fila,index) => <Link to={`/Pacientes/${fila.id}`} className="list-group-item list-group-item-danger" aria-current="true" key={`${index}${fila.nombre}`}>
-                    <div className="d-flex w-100 justify-content-between">
-                    <h5 className="mb-1">{fila.nombre} {fila.apellido}</h5>
-                    <small>{index}</small>
+                    filasf.map((fila,index) => <div className="col-md-4">
+                    <div className="card mt-3">
+                    <img src={paciente} class="card-img-top" />
+                    <div className="card-body">
+                      <h5 className="card-title">{fila.nombre} {fila.apellido}</h5>
+                      <p className="card-text">{fila.correo}</p>
+                      <p className="card-text">{fila.telefono}</p>
+                      <Link to={`/Pacientes/${fila.id}`} className="btn btn-primary">Ver paciente</Link>
                     </div>
-                    <p className="mb-1">{fila.correo}</p>
-                    <small>{fila.telefono}</small>
-                </Link>)  
+                  </div>
+                  </div>)  
                 :<span>No hay pacientes que mostrar</span>}
             </div>
         </div>
