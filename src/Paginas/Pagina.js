@@ -22,7 +22,6 @@ function Pagina({titulo, entidad}) {
     };
     
     const filas = entidades[`${entidad}`];
-    const columnas = Object.keys(filas[0]);
     useEffect(() => {
         const getEntidad = async () => {
             const { docs } = await store.collection(entidad).get()
