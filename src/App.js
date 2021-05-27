@@ -9,6 +9,7 @@ import citaForm from "./Paginas/CitaForm";
 import PacienteForm from "./Paginas/PacienteForm";
 import Inicio from "./Paginas/Inicio";
 
+import {proovedorPaciente} from './contextos/contextoPaciente';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -27,13 +28,13 @@ function App() {
             <Route path='/inicio' exact component={Inicio} />
             <Route path='/Cita' exact component={(props) => (
             <Pagina {...props} titulo="Citas" entidad="citas" />
-          )} />
-
-            <Route path='/Pacientes' exact component={(props) => (
-            <Pacientes {...props} titulo="Pacientes" entidad="pacientes" />
-          )} />
+          )} />            
             <Route path='/nuevaCita' exact component={citaForm} />
             <Route path='/nuevoPaciente' exact component={PacienteForm} />
+            
+            <Route path='/Pacientes' exact component={(props) => (
+            <Pacientes {...props} titulo="Pacientes" entidad="pacientes" />
+            ) } />
             <Route path='/Pacientes/:id' exact component={paciente} />
 
             <Route path="*">
