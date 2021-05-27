@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { contextoPaciente } from './contextos/contextoPaciente';
+import { ProovedorPaciente } from './contextos/ContextoPaciente';
 //import 'bootstrap/dist/css/bootstrap.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <contextoPaciente>
+    <ProovedorPaciente>
       <App />
-    </contextoPaciente>
+    </ProovedorPaciente>
   </React.StrictMode>,
   document.getElementById('root')
 );

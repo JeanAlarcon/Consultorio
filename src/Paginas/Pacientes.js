@@ -20,7 +20,7 @@ function Pacientes({titulo, entidad}) {
         <div className="container">
             <div className="row">
                 {filasf.length > 0 ?
-                    filasf.map((fila,index) => <div className="col-md-4">
+                    filasf.map((fila,index) => <div className="col-md-4" key={fila.id}>
                     <div className="card mt-3">
                     <img src={paciente} class="card-img-top" />
                     <div className="card-body">
