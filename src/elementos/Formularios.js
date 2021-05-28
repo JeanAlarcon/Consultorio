@@ -31,6 +31,14 @@ const Label = styled.label`
     `}
 `;
 
+const LabelTerminos = styled.label`
+    display: flex;
+    font-weigth: 700;
+    padding: 10px;
+    min-height: 40px;
+    cursor: pointer;
+`;
+
 const GrupoInput = styled.div`
     position: relative;
     z-index: 90;
@@ -100,10 +108,12 @@ const IconoValidacion = styled(FontAwesomeIcon)`
 `;
 
 const ContenedorTerminos = styled.div`
+    background: #fff;
     grid-column: span 2;
 
-    input{
-        margin-right: 10px;
+    input {
+        margin-right: 20px;
+        
     }
 
     @media (max-width: 800px){
@@ -162,6 +172,13 @@ const MensajeError = styled.div`
     }
 `;
 
+const Titulo = styled.h2`
+    display: flex;
+    text-align: center;
+    padding: 30px 0 15px;
+    font-size: 27px;
+`;
+
 
 export {
     Formulario,
@@ -174,5 +191,7 @@ export {
     ContenedorBotonCentrado,
     Boton,
     MensajeExito,
-    MensajeError
+    MensajeError, 
+    LabelTerminos,
+    Titulo
 };
