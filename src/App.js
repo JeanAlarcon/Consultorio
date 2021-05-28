@@ -9,8 +9,6 @@ import citaForm from "./Paginas/CitaForm";
 import PacienteForm from "./Paginas/PacienteForm";
 import Inicio from "./Paginas/Inicio";
 
-import {proovedorPaciente} from './contextos/contextoPaciente';
-
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import "./App.css"
