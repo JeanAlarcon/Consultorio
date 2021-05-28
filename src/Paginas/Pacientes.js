@@ -30,8 +30,8 @@ function Pacientes({titulo, entidad}) {
                             <p className="card-text">{fila.correo}</p>
                             <p className="card-text">{fila.telefono}</p>
                             
-                            <Link to={`/Pacientes/${fila.id}`} className="btn btn-danger"><FontAwesomeIcon icon={faUser}/> Ver paciente</Link>
-                            <Link to={`/Pacientes/${fila.id}`} className="btn btn-danger"><FontAwesomeIcon icon={faFileMedical}/> Historial Clinico</Link>
+                            <Link to={`/Pacientes/informacion/${fila.id}`} className="btn btn-danger"><FontAwesomeIcon icon={faUser}/> Ver paciente</Link>
+                            <Link to={`/Pacientes/historial/${fila.id}`} className="btn btn-danger"><FontAwesomeIcon icon={faFileMedical}/> Historial Clinico</Link>
                             
                         </div>
                   </div>
