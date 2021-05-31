@@ -10,7 +10,7 @@ function Tabla({titulo, entidad, columnas = [], filas=[]}) {
         <Encabesado columnas={columnas} />
           <tbody id="lista-consultas">
             {filas.map((fila,index) =>
-              <Filas fila={fila} index= {index} columnas={columnas} />
+              <Filas fila={fila} index= {index} columnas={columnas} key={`Tablade${entidad}`} />
             )}
           </tbody>
       </table>

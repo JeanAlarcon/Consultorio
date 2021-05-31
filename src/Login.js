@@ -9,10 +9,10 @@ function Inicio() {
     const [email,setEmail] = useState('');
     const [contrasena,setContrasena] = useState('');
 
-    const iniciarSecion = (e) => {
+    const iniciarSecion = async (e) => {
         e.preventDefault();
         try {
-            auth.signInWithEmailAndPassword(email,contrasena)
+             await auth.signInWithEmailAndPassword(email,contrasena)
             .then((r)=>{
                 historia.push('/inicio')
             })
