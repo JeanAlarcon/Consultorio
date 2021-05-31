@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { NavLink } from 'react-router-dom'
 import "./sidebar.css"
+import { useAuth } from "./../../contextos/ContextoAuth"
 
 function Sidebar() {
     const [ mostrarCita, setMostrarCita] = useState(true);
     const [ mostrarPaciente, setMostrarPaciente] = useState(true);
+    const { usuario } = useAuth();
     
-    return (
+    return ( usuario &&
       <div className="sidebar-container">
       <div className="sidebar-logo">
         Consultorio

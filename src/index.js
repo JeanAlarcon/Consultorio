@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ProovedorPaciente } from './contextos/ContextoPaciente';
+import { ProovedorAuth } from './contextos/ContextoAuth';
 //import 'bootstrap/dist/css/bootstrap.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ProovedorPaciente>
+    <ProovedorAuth>
       <App />
-    </ProovedorPaciente>
+    </ProovedorAuth>
   </React.StrictMode>,
   document.getElementById('root')
 );
