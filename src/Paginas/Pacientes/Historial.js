@@ -25,7 +25,7 @@ function Historial(){
         {paciente ? <div classNAme='row'>
         <h1>Historial Clinico</h1>
         <div className="list-group-numbered">
-        <ul className="list-group list-group-horizontal-md">
+        <ul className="list-group list-group-horizontal-md my-2">
             <li className="list-group-item">Fiebre reumática o enfermedad cardiaca reumática</li>
             <li className="list-group-item">{paciente.pregunta1}</li>
         </ul>

@@ -27,7 +27,7 @@ function App() {
             <Route path='/inicio' exact component={Inicio} />
             <Route path='/Cita' exact component={(props) => (
             <Pagina {...props} titulo="Citas" entidad="citas" />
-          )} />            
+            )} />            
             <Route path='/nuevaCita' exact component={citaForm} />
             <Route path='/nuevoPaciente' exact component={PacienteForm} />
             

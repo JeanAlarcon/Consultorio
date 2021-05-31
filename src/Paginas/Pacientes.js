@@ -2,7 +2,6 @@ import "./Pagina.css"
 import { useEffect, useState } from "react";
 import { store } from "../firebaseconfig";
 import { Link } from 'react-router-dom'
-import paciente from './../assets/img/paciente.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faIdCardAlt,faFileMedical, faUser} from '@fortawesome/free-solid-svg-icons'
 
