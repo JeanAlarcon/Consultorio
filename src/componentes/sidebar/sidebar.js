@@ -7,6 +7,7 @@ function Sidebar() {
     const [ mostrarCita, setMostrarCita] = useState(true);
     const [ mostrarPaciente, setMostrarPaciente] = useState(true);
     const { usuario } = useAuth();
+    console.log(usuario)
     
     return ( usuario &&
       <div className="sidebar-container">

@@ -3,7 +3,7 @@ import NavBoost from "./componentes/Navbar/NavBoost";
 
 import Pagina from "./Paginas/Pagina";
 import Pacientes from "./Paginas/Pacientes";
-import paciente from "./Paginas/Paciente";
+import paciente from "./Paginas/Pacientes/Paciente";
 import Login from "./Login";
 import citaForm from "./Paginas/CitaForm";
 import PacienteForm from "./Paginas/PacienteForm";

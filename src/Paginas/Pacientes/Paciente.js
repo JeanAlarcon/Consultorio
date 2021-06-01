@@ -1,5 +1,5 @@
 import './Paciente.css'
-import { store } from "../firebaseconfig";
+import { store } from "../../firebaseconfig";
 
 import { useParams } from "react-router";
 import { useState,useEffect } from 'react';
