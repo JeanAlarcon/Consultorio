@@ -31,7 +31,7 @@ function Pacientes({titulo, entidad}) {
                             
                             <Link to={`/Pacientes/informacion/${fila.id}`} className="btn btn-danger"><FontAwesomeIcon icon={faUser}/> Ver paciente</Link>
                             <Link to={`/Pacientes/historial/${fila.id}`} className="btn btn-danger"><FontAwesomeIcon icon={faFileMedical}/> Historial Clinico</Link>
-                            <Link to={`/Pacientes/tratamiento/${fila.id}`} className="btn btn-danger"><FontAwesomeIcon icon={faTooth}/> Tratamientos</Link>    
+                            <Link to={`/Pacientes/tratamientos/${fila.id}`} className="btn btn-danger"><FontAwesomeIcon icon={faTooth}/> Tratamientos</Link>    
 
                         </div>
                   </div>

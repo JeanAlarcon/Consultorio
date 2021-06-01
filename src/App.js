@@ -9,6 +9,7 @@ import citaForm from "./Paginas/citas/CitaForm";
 import PacienteForm from "./Paginas/Pacientes/PacienteForm";
 import Inicio from "./Paginas/Inicio";
 import Historial from "./Paginas/Pacientes/Historial"
+import Tratamientos from "./Paginas/Pacientes/Tratamientos"
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -36,7 +37,7 @@ function App() {
             ) } />
             <Route path='/Pacientes/informacion/:id' exact component={paciente} />
             <Route path='/Pacientes/historial/:id' exact component={Historial} />
-
+            <Route path='/Pacientes/tratamientos/:id' exact component={Tratamientos} />
             <Route path="*">
               <h1>Pagina no encontrada vuelve al Inicio</h1>
             </Route>
