@@ -6,7 +6,7 @@ import Pacientes from "./Paginas/Pacientes";
 import paciente from "./Paginas/Pacientes/Paciente";
 import Login from "./Login";
 import citaForm from "./Paginas/citas/CitaForm";
-import PacienteForm from "./Paginas/PacienteForm";
+import PacienteForm from "./Paginas/Pacientes/PacienteForm";
 import Inicio from "./Paginas/Inicio";
 import Historial from "./Paginas/Pacientes/Historial"
 

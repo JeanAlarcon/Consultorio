@@ -1,10 +1,9 @@
 import React, {useState} from 'react';
-import {Formulario, ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeExito, MensajeError, LabelTerminos, Titulo} from './../elementos/Formularios';
+import {Formulario, ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeExito, MensajeError, LabelTerminos, Titulo} from '../../elementos/Formularios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
-import ComponenteInput from './../componentes/Input';
-import "./Pagina.css"
-import {store} from './../firebaseconfig'
+import ComponenteInput from '../../componentes/Input';
+import {store} from '../../firebaseconfig'
 
 
 const App = () => {
