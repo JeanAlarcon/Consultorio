@@ -1,11 +1,11 @@
 import Sidebar from "./componentes/sidebar/sidebar";
 import NavBoost from "./componentes/Navbar/NavBoost";
 
-import Pagina from "./Paginas/Pagina";
+import Citas from "./Paginas/citas/Citas";
 import Pacientes from "./Paginas/Pacientes";
 import paciente from "./Paginas/Pacientes/Paciente";
 import Login from "./Login";
-import citaForm from "./Paginas/CitaForm";
+import citaForm from "./Paginas/citas/CitaForm";
 import PacienteForm from "./Paginas/PacienteForm";
 import Inicio from "./Paginas/Inicio";
 import Historial from "./Paginas/Pacientes/Historial"
@@ -26,7 +26,7 @@ function App() {
             <Route path='/' exact component={Login} />
             <Route path='/inicio' exact component={Inicio} />
             <Route path='/Cita' exact component={(props) => (
-            <Pagina {...props} titulo="Citas" entidad="citas" />
+            <Citas {...props} titulo="Citas" entidad="citas" />
             )} />            
             <Route path='/nuevaCita' exact component={citaForm} />
             <Route path='/nuevoPaciente' exact component={PacienteForm} />

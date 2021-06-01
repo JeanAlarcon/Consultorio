@@ -1,4 +1,4 @@
-import NuevaCita from "../componentes/FormularioCita/NuevaCita";
+import NuevaCita from "../../componentes/FormularioCita/NuevaCita";
 
 function CitaForm() {
     return (

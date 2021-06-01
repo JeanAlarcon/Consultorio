@@ -1,7 +1,6 @@
-import Tabla from "../componentes/Tabla/Tabla";
+import Tabla from "../../componentes/Tabla/Tabla";
 import { useEffect, useState } from "react";
-import "./Pagina.css"
-import { store } from "../firebaseconfig";
+import { store } from "../../firebaseconfig";
 
 
 function Pagina({titulo, entidad}) {
