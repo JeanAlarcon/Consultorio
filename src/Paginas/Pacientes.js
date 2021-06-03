@@ -23,15 +23,15 @@ function Pacientes({titulo, entidad}) {
                 {filasf.length > 0 ?
                     filasf.map((fila,index) => <div className="col-md-4" key={fila.id}>
                     <div className="card mt-2">
-                        <FontAwesomeIcon className="icon" icon={faIdCardAlt} size="10x" style={{color:'red'}}/>
+                        <FontAwesomeIcon className="icon" icon={faIdCardAlt} size="10x" style={{color:'blue'}}/>
                         <div className="card-body">
                             <h5 className="card-title">{fila.nombre} {fila.apellido}</h5>
                             <p className="card-text">{fila.correo}</p>
                             <p className="card-text">{fila.telefono}</p>
                             
-                            <Link to={`/Pacientes/informacion/${fila.id}`} className="btn btn-danger"><FontAwesomeIcon icon={faUser}/> Ver paciente</Link>
-                            <Link to={`/Pacientes/historial/${fila.id}`} className="btn btn-danger"><FontAwesomeIcon icon={faFileMedical}/> Historial Clinico</Link>
-                            <Link to={`/Pacientes/tratamientos/${fila.id}`} className="btn btn-danger"><FontAwesomeIcon icon={faTooth}/> Tratamientos</Link>    
+                            <Link to={`/Pacientes/informacion/${fila.id}`} className="btn "><FontAwesomeIcon icon={faUser}/> Ver paciente</Link>
+                            <Link to={`/Pacientes/historial/${fila.id}`} className="btn "><FontAwesomeIcon icon={faFileMedical}/> Historial Clinico</Link>
+                            <Link to={`/Pacientes/tratamientos/${fila.id}`} className="btn "><FontAwesomeIcon icon={faTooth}/> Tratamientos</Link>    
 
                         </div>
                   </div>

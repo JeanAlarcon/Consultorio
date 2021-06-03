@@ -23,4 +23,6 @@ main{
 }
 .btn {
     padding: 0px 10px;
+    color: fuchsia;
+    background-color: #fff;
 }
