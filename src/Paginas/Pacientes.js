@@ -23,7 +23,7 @@ function Pacientes({titulo, entidad}) {
                 {filasf.length > 0 ?
                     filasf.map((fila,index) => <div className="col-md-4" key={fila.id}>
                     <div className="card mt-2">
-                        <FontAwesomeIcon className="icon" icon={faIdCardAlt} size="10x" style={{color:'blue'}}/>
+                        <FontAwesomeIcon className="icon" icon={faIdCardAlt} size="10x" />
                         <div className="card-body">
                             <h5 className="card-title">{fila.nombre} {fila.apellido}</h5>
                             <p className="card-text">{fila.correo}</p>
