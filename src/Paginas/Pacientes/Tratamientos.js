@@ -17,7 +17,6 @@ function Tratamientos(){
             tipoTratamiento: tipoTratamiento,
             pagos:pagos,
             total: total,
-            id
         }
 
 
@@ -25,7 +24,11 @@ function Tratamientos(){
 
         try {
             const data = await store.collection('tratamientos').add(tratamiento);
-            console.log('tratamiento agregado')
+            console.log('tratamiento agregado',data.id)
+            const tratamientos ={
+                tratamiento:data.id
+            }
+            await store.collection('pacientes').doc(id).set(tratamientos, {merge: true})
         } catch (error) {
             console.log(error)
         }
