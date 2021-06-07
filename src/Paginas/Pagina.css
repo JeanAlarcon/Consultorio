@@ -14,6 +14,9 @@ main{
     width: 18rem;
     border-radius: 20px;
     padding: 20px 50px;
+    box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+    overflow: hidden;
+
 }
 
 .icon {
@@ -26,4 +29,40 @@ main{
     padding: 0px 10px;
     color: fuchsia;
     background-color: #fff;
+}
+
+#hero {
+    width: 100%;
+    height: 80vh;
+    background-color: aquamarine;
+    /*background: url("../assets/img/Dentista.jpg") top center;
+        background-attachment: scroll;
+        background-size: auto;*/
+    background-size: cover;
+    position: relative;
+}
+
+.pt-lg-0 {
+    padding-top: 0 !important;
+}
+.order-lg-1 {
+    order: 1 !important;
+}
+
+.about .content h3 {
+    font-weight: 600;
+    font-size: 26px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+}
+
+.fst-italic {
+    font-style: italic !important;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
 }

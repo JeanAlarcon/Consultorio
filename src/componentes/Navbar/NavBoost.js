@@ -1,5 +1,6 @@
 import "./Nav.css"
 import logo from "./logo.jpg"
+import { NavLink } from 'react-router-dom'
 
 
 function NavBoost() {
@@ -9,25 +10,25 @@ function NavBoost() {
         
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-                <a className="navbar-logo" href="/" >
+                <NavLink className="navbar-logo" to="/" >
                     <img src={logo} />
-                </a>
+                </NavLink>
               <li className="nav-item">
-                <a className="nav-link " aria-current="page" href="/">Inicio</a>
+                <NavLink className="nav-link " aria-current="page" to="/" activeclassname="active" >Inicio</NavLink>
               </li>
 
 
               <li className="nav-item">
-                <a className="nav-link " href="/" >
+                <NavLink className="nav-link " to="/especialidades" activeclassname="active" >
                   Especialidades
-                </a>
+                </NavLink>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="/">Registrar cita</a>
+                <NavLink className="nav-link" to="/" activeclassname="active" >Registrar cita</NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">Nosotros</a>
+                <NavLink className="nav-link" to="/" activeclassname="active" >Nosotros</NavLink>
               </li>
             </ul>
             

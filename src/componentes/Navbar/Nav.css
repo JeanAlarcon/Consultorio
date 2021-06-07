@@ -69,3 +69,8 @@
 	opacity: 0;
 	transition: opacity 1.5s;
 }
+
+.active {
+	background-color: #fff;
+	color: rgb(53, 51, 51);
+  }

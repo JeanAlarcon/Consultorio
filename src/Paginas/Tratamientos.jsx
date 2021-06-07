@@ -1,52 +1,66 @@
-function Tratamientos(){
+import "./especialidades.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faUser, faTeethOpen, faTooth, faChild, faUserMd} from '@fortawesome/free-solid-svg-icons'
+
+function Especialidades(){
 return(
-    <section id="why-us" className="why-us">
-      <div className="container" data-aos="fade-up">
-        <div className="row">
-          <div className="col-lg-4 d-flex align-items-stretch">
-            <div className="content">
-              <h3>Why Choose Mentor?</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
-              </p>
-              <div className="text-center">
-                <a href="about.html" className="more-btn">Learn More <i className="bx bx-chevron-right"></i></a>
-              </div>
-            </div>
+    <section id="featured-services" className="featured-services">
+    <div className="container" data-aos="fade-up">
+
+      <div className="row">
+        <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div className="icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div className="icon"><FontAwesomeIcon icon={faTeethOpen}  size="2x"/></div>   
+            <h4 className="title">Ortodoncia</h4>
+            <p className="description">Es una alternativa de prevención y correccion de los problemas de las piezas dentales
+            con el objeto de evitar intervenciones agresivas al paciente como pueden ser las cirujias y las estracciones.</p>
           </div>
-          <div className="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div className="icon-boxes d-flex flex-column justify-content-center">
-              <div className="row">
-                <div className="col-xl-4 d-flex align-items-stretch">
-                  <div className="icon-box mt-4 mt-xl-0">
-                    <i className="bx bx-receipt"></i>
-                    <h4>Corporis voluptates sit</h4>
-                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-                  </div>
-                </div>
-                <div className="col-xl-4 d-flex align-items-stretch">
-                  <div className="icon-box mt-4 mt-xl-0">
-                    <i className="bx bx-cube-alt"></i>
-                    <h4>Ullamco laboris ladore pan</h4>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                  </div>
-                </div>
-                <div className="col-xl-4 d-flex align-items-stretch">
-                  <div className="icon-box mt-4 mt-xl-0">
-                    <i className="bx bx-images"></i>
-                    <h4>Labore consequatur</h4>
-                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+        </div>
+
+        <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div className="icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div className="icon"><FontAwesomeIcon icon={faTooth} size="2x" /></div>
+            <h4 className="title">Cirujua de terceros molares</h4>
+            <p className="description">Consiste en la extraccion de terceros molares, esta cirujia es de las mas comunes.
+            Estas en buenas manos nuestra experiencia es amplia.</p>
+          </div>
+        </div>
+
+        <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div className="icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div className="icon"><FontAwesomeIcon icon={faChild} size="2x" /></div>
+            <h4 className="title">Odontopediatria</h4>
+            <p className="description">A tu pequeño le encantara conocernos, contamos con tratamientos profecionales
+            y las mejores manos para atender a tus niños.</p>
+          </div>
+        </div>
+
+        <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div className="icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div className="icon"><FontAwesomeIcon icon={faUserMd} size="2x" /></div>
+            <h4 className="title">Extracciones</h4>
+            <p className="description">Consiste en un procedimiento de cirujia oral para remover un diente o 
+            porcion del mismo hueso ya sea por caries, fractura o restos de diente.</p>
+          </div>
+        </div>
+
+        <h4 className="title">Operatoria</h4>
+            
+
+        <div className="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div className="icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div className="icon"><FontAwesomeIcon icon={faUser}  /></div>
+            <h4 className="title">Odontopediatria</h4>
+            <p className="description">A tu pequeño le encantara conocernos, contamos con tratamientos profecionales
+            y las mejores manos para atender a tus niños</p>
           </div>
         </div>
 
       </div>
-    </section>
+
+    </div>
+  </section>
 )
 }
 
-export default Tratamientos;
+export default Especialidades;
