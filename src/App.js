@@ -10,6 +10,7 @@ import PacienteForm from "./Paginas/Pacientes/PacienteForm";
 import Inicio from "./Paginas/Inicio";
 import Historial from "./Paginas/Pacientes/Historial"
 import Tratamientos from "./Paginas/Pacientes/Tratamientos"
+import tratamientos from "./Paginas/Tratamientos"
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -24,8 +25,9 @@ function App() {
         <div className="main">
           <NavBoost/>
           <Switch>
-            <Route path='/' exact component={Login} />
-            <Route path='/inicio' exact component={Inicio} />
+            <Route path='/login' exact component={Login} />
+            <Route path='/' exact component={Inicio} />
+            <Route path='/tratamientos' exact component={tratamientos} />
             <Route path='/Cita' exact component={(props) => (
             <Citas {...props} titulo="Citas" entidad="citas" />
             )} />            

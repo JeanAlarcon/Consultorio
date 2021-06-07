@@ -25,9 +25,8 @@ function Tratamientos(){
         try {
             const data = await store.collection('tratamientos').add(tratamiento);
             console.log('tratamiento agregado',data.id)
-            const tratamientos ={
-                tratamiento:data.id
-            }
+            const trat = data.id
+            const tratamientos = {['tratamientos']:trat}
             await store.collection('pacientes').doc(id).set(tratamientos, {merge: true})
         } catch (error) {
             console.log(error)
