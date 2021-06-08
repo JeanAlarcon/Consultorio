@@ -18,10 +18,10 @@ function Pacientes({titulo, entidad}) {
     },[])
 
     return (
-        <div className="container">
-            <div className="row mx-auto">
+        <div className="containerPacientes mx-auto justify-content-center align-items-center">
+            <div className="row mx-auto  justify-content-center">
                 {filasf.length > 0 ?
-                    filasf.map((fila,index) => <div className="col-md-4" key={fila.id}>
+                    filasf.map((fila,index) => <div className="col-auto col-md-4" key={fila.id}>
                     <div className="card mt-2">
                         <FontAwesomeIcon className="icon" icon={faIdCardAlt} size="10x" />
                         <div className="card-body">

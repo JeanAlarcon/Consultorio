@@ -7,11 +7,11 @@ main{
 
 .card{
     width: 18rem;
-    border-radius: 20px;
+    border-radius: 12px;
     padding: 20px 50px;
     box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
     overflow: hidden;
-
+    position: relative;
 }
 
 .icon {
@@ -60,4 +60,8 @@ h1, h2, h3, h4, h5, h6 {
 p {
     margin-top: 0;
     margin-bottom: 1rem;
+}
+
+.containerPacientes{
+    padding-left: 80px;
 }
