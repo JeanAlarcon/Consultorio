@@ -8,7 +8,7 @@ return(
     <div className="containerEspecialidades" data-aos="fade-up">
 
     <div className="container">
-        <h4 className="titlilo">Especialidades</h4>
+        <h4 className="titulo">Especialidades</h4>
         <hr className="solid"></hr>
     </div>
 
@@ -50,7 +50,7 @@ return(
         </div>
 
         <div className="container">
-          <h4 className="titlilo">Operatoria</h4>
+          <h4 className="titulo">Operatoria</h4>
           <hr className="solid"></hr>
         </div>
         
