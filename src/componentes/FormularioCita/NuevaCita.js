@@ -37,7 +37,7 @@ function NuevaCita(){
         <div className="principal">
             <div className="wrap">
                 <form onSubmit={addPaciente} className="formulario" action="">
-                    <h2>Registrar Cita</h2>
+                    <h2 className="Titulo">Registrar Cita</h2>
                     <input 
                         type="text" 
                         id="citaInput" 
