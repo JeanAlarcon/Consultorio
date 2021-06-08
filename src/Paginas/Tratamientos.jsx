@@ -7,6 +7,11 @@ return(
     <section id="featured-services" className="featured-services">
     <div className="containerEspecialidades" data-aos="fade-up">
 
+    <div className="container">
+        <h4 className="titlilo">Especialidades</h4>
+        <hr className="solid"></hr>
+    </div>
+
       <div className="row">
         <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
           <div className="icon-box" data-aos="fade-up" data-aos-delay="100">
@@ -49,9 +54,26 @@ return(
           <hr className="solid"></hr>
         </div>
         
-            
+        <div className="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div className="icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div className="icon"><FontAwesomeIcon icon={faUser}  /></div>
+            <h4 className="title">Endodoncia</h4>
+            <p className="description">Consiste en eliminar la parte profunda del diente cuando se encuentra
+            lesionado o infectado, este procedimiento permite salvar piezas dentales y reduce los casos de 
+            estraccion.</p>
+          </div>
+        </div>
 
-        <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+        <div className="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div className="icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div className="icon"><FontAwesomeIcon icon={faUser}  /></div>
+            <h4 className="title">Protesis</h4>
+            <p className="description">Consiste en restaurar la anatomia de las piezas dentales y recuperar
+            la funcionalidad de la boca para el bienestar del paciente.</p>
+          </div>
+        </div>
+
+        <div className="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
           <div className="icon-box" data-aos="fade-up" data-aos-delay="400">
             <div className="icon"><FontAwesomeIcon icon={faUser}  /></div>
             <h4 className="title">Recinas</h4>
@@ -59,7 +81,7 @@ return(
           </div>
         </div>
 
-        <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+        <div className="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
           <div className="icon-box" data-aos="fade-up" data-aos-delay="400">
             <div className="icon"><FontAwesomeIcon icon={faUser}  /></div>
             <h4 className="title">Amalgama</h4>
@@ -67,13 +89,17 @@ return(
           </div>
         </div>
 
-        <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+        <div className="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
           <div className="icon-box" data-aos="fade-up" data-aos-delay="400">
             <div className="icon"><FontAwesomeIcon icon={faUser}  /></div>
             <h4 className="title">Limpieza dental</h4>
             <p className="description">Remocion del sarro dental con ultrasonido y pulido dental.</p>
           </div>
         </div>
+
+
+        <hr/>
+
       </div>
 
     </div>
