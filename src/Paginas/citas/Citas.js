@@ -1,3 +1,4 @@
+import "./Citas.css"
 import Tabla from "../../componentes/Tabla/Tabla";
 import { useEffect, useState } from "react";
 import { store } from "../../firebaseconfig";
@@ -34,7 +35,7 @@ function Pagina({titulo, entidad}) {
 
     return (
         <>
-        <div className="container">
+        <div className="containerCitas mx-auto">
             {(filasf.length >0 ? <Tabla titulo={titulo} entidad={entidad} columnas={columnasf} filas={filasf} key={entidad}/>
             :<span>No hay citas que mostrar</span>)}
         </div>

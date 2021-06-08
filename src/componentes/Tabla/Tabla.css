@@ -3,14 +3,14 @@
 }
 
 .btn-editar {
-    background-color: blanchedalmond;
+    background-color: #81cbce;
     border-radius: 5px;
     font-family: Roboto, sans-serif;
     padding: 4px 18px;
 }
 
 .btn-eliminar {
-    background-color: rgb(250, 125, 244);
+    background-color: rgb(243, 194, 241);
     border-radius: 5px;
     font-family: Roboto, sans-serif;
     padding: 4px 18px;

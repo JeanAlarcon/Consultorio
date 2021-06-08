@@ -2,7 +2,7 @@
 function Encabesado(props) {
     if (props.columnas.length === 0) return false;
     return (
-        <thead className="table table-primary">
+        <thead className="table table-striped">
             <tr>
             <th scope="col">Id</th>
             

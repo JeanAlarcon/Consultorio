@@ -6,6 +6,7 @@ function Tabla({titulo, entidad, columnas = [], filas=[]}) {
   
   return (<div className="tabla">
     <h1>{titulo}</h1>
+    <hr className="solid" />
       <table className="table table-striped">
         <Encabesado columnas={columnas} />
           <tbody id="lista-consultas">
