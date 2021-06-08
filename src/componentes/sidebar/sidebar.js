@@ -4,7 +4,6 @@ import "./sidebar.css"
 import { useAuth } from "./../../contextos/ContextoAuth"
 
 function Sidebar() {
-    const [ mostrarCita, setMostrarCita] = useState(true);
     const [ mostrarPaciente, setMostrarPaciente] = useState(true);
     const { usuario } = useAuth();
     console.log(usuario)
@@ -16,10 +15,9 @@ function Sidebar() {
       </div>
 
       <ul className="sidebar-navigation">
-        <li className="header" onClick={() => setMostrarCita(!mostrarCita)}>
+        <li className="header">
             Citas
         </li>
-        {(mostrarCita ?
         <ul>
           <li>
             <NavLink to="/nuevaCita">
@@ -32,12 +30,10 @@ function Sidebar() {
             </NavLink>
           </li>
         </ul>
-      : '' )}
 
-        <li className="header" onClick={() => setMostrarPaciente(!mostrarPaciente)}>
+        <li className="header" >
           Paciente
         </li>
-        {(mostrarPaciente ?
           <ul>
             <li>
               <NavLink to="/nuevoPaciente">
@@ -50,7 +46,6 @@ function Sidebar() {
               </NavLink>
             </li>
           </ul>
-        : '')}
         
         <li>
           <NavLink exact to="/">
