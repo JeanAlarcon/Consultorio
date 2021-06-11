@@ -11,6 +11,7 @@ import Inicio from "./Paginas/Inicio";
 import Historial from "./Paginas/Pacientes/Historial"
 import Tratamientos from "./Paginas/Pacientes/Tratamientos"
 import especialidades from "./Paginas/Tratamientos"
+import Nosotros from "./Paginas/Nosotros"
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -28,6 +29,7 @@ function App() {
             <Route path='/login' exact component={Login} />
             <Route path='/' exact component={Inicio} />
             <Route path='/especialidades' exact component={especialidades} />
+            <Route path='/nosotros' exact component={Nosotros} />
             <Route path='/Cita' exact component={(props) => (
             <Citas {...props} titulo="Citas" entidad="citas" />
             )} />            
