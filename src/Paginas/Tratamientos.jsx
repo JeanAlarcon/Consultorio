@@ -60,23 +60,23 @@ return(
             <h4 className="title">Endodoncia</h4>
             <p className="description">Consiste en eliminar la parte profunda del diente cuando se encuentra
             lesionado o infectado, este procedimiento permite salvar piezas dentales y reduce los casos de 
-            estraccion.</p>
+            extracción.</p>
           </div>
         </div>
 
         <div className="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
           <div className="icon-box" data-aos="fade-up" data-aos-delay="400">
             <div className="icon"><FontAwesomeIcon icon={faUser}  /></div>
-            <h4 className="title">Protesis</h4>
-            <p className="description">Consiste en restaurar la anatomia de las piezas dentales y recuperar
-            la funcionalidad de la boca para el bienestar del paciente.</p>
+            <h4 className="title">Prótesis</h4>
+            <p className="description">Consiste en restaurar la anatomía de las piezas dentales y recuperar 
+            la funcionalidad de la boca para el bienestar del paciente..</p>
           </div>
         </div>
 
         <div className="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
           <div className="icon-box" data-aos="fade-up" data-aos-delay="400">
             <div className="icon"><FontAwesomeIcon icon={faUser}  /></div>
-            <h4 className="title">Recinas</h4>
+            <h4 className="title">Resinas</h4>
             <p className="description">Restauración permanente del diente a su color natural.</p>
           </div>
         </div>
@@ -85,7 +85,7 @@ return(
           <div className="icon-box" data-aos="fade-up" data-aos-delay="400">
             <div className="icon"><FontAwesomeIcon icon={faUser}  /></div>
             <h4 className="title">Amalgama</h4>
-            <p className="description">Restauración permanente del diente con aleaciones metalicas.</p>
+            <p className="description">Restauración permanente del diente con aleaciones metálicas.</p>
           </div>
         </div>
 
@@ -93,7 +93,7 @@ return(
           <div className="icon-box" data-aos="fade-up" data-aos-delay="400">
             <div className="icon"><FontAwesomeIcon icon={faUser}  /></div>
             <h4 className="title">Limpieza dental</h4>
-            <p className="description">Remocion del sarro dental con ultrasonido y pulido dental.</p>
+            <p className="description">Remoción del sarro dental con ultrasonido y pulido dental.</p>
           </div>
         </div>
 
