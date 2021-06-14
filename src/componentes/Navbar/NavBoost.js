@@ -25,7 +25,7 @@ function NavBoost() {
               </li>
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="/" activeclassname="active" >Registrar cita</NavLink>
+                <NavLink className="nav-link" to="/nuevaCita" activeclassname="active" >Registrar cita</NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/nosotros" activeclassname="active" >Nosotros</NavLink>
