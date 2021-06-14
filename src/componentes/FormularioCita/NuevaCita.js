@@ -22,8 +22,13 @@ function NuevaCita(){
         }
         
         try {
-            const data = await store.collection('citas').add(cita)
-            console.log('cita agregada') 
+            const citaRef = store.collection('citas');
+            const query = await citaRef.where('fecha','==',Fecha).where('hora','==',Hora).get();
+            console.log(query);
+            if(query.empty){
+                const data = await store.collection('citas').add(cita);
+                console.log('cita agregada')
+            } 
         } catch (error) {
             console.log(error)
         }
