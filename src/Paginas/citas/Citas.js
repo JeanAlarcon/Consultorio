@@ -24,10 +24,26 @@ function Pagina({titulo, entidad}) {
     const filas = entidades[`${entidad}`];
     useEffect(() => {
         const getEntidad = async () => {
-            const { docs } = await store.collection(entidad).get()
-            const entidadf = docs.map(item =>({id:item.id, ...item.data()}));
-            setFilasf(entidadf)
-            setColumnasf(Object.keys(filas[0]))
+            var date = new Date();
+            const fechaHoy = `${date.getFullYear()}-0${date.getMonth()+1}-${date.getDate()}`;
+            const entidadf = [];
+            console.log('fecha de hoy',fechaHoy)
+            try {
+                const citaRef = store.collection('citas');
+                const query = await citaRef.where('fecha','==',fechaHoy).get();
+                if(!query.empty){
+                    query.forEach(item =>(setFilasf([{id:item.id, ...item.data()}])));
+                    console.log("filas ",filasf.length)
+                    //setFilasf(entidadf)
+                    setColumnasf(Object.keys(filas[0]))
+                }else {
+                    console.log("consulta con valores vacios");
+                }
+                
+                //const entidadf = docs.map(item =>({id:item.id, ...item.data()}));
+            } catch (error){
+                console.log(error);
+            }
         }
         getEntidad()
     },[])
@@ -36,7 +52,7 @@ function Pagina({titulo, entidad}) {
     return (
         <>
         <div className="containerCitas mx-auto">
-            {(filasf.length >0 ? <Tabla titulo={titulo} entidad={entidad} columnas={columnasf} filas={filasf} key={entidad}/>
+            {(filasf.length > 0 ? <Tabla titulo={titulo} entidad={entidad} columnas={columnasf} filas={filasf} key={entidad}/>
             :<span>No hay citas que mostrar</span>)}
         </div>
         </>
