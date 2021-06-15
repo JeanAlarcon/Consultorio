@@ -10,6 +10,7 @@ function Tratamientos(){
     const [pagos,setPagos] = useState('');
     const [total,setTotal] = useState('');
     const [tratamientos,setTratamientos] = useState([]);
+    const [nuevoPago, setNuevoPAgo] = useState('');
 
     useEffect(() => {
         const getEntidad = async () => {
@@ -52,6 +53,17 @@ function Tratamientos(){
         settipoTratamiento('')
         setPagos('')
         setTotal('')
+    }
+
+    const addNuevoPago = (idt,pagos,tipoTratamiento,total) => {
+        console.log("id",pagos)
+        const trat = {
+            tipoTratamiento: tipoTratamiento,
+            pagos:pagos+nuevoPago,
+            total: total,
+        }
+        const data = store.collection('pacientes').doc(id).collection('tratamientos').doc(idt).set(trat);
+
     }
 
     return(
@@ -101,12 +113,14 @@ function Tratamientos(){
     {tratamientos.length ?<div className="containerTratamientos">
         <h1>Tratamientos</h1>
         <hr/>
-        {tratamientos.map((trat)=><>
+        {tratamientos.map((trat)=><div className="row col-md-6">
             <h4>Tipo : { trat.tipoTratamiento }</h4>
-            <h4>Pagos: { trat.pagos }</h4>
+            <h4>Pagado: { trat.pagos } Agregar Pago
+            </h4> <input type="number" className="form-control" value={nuevoPago} onChange={(e)=> setNuevoPAgo(e.target.value)}/>
+            <button onClick={(idt,pagos,tipoTratamiento,total)=>addNuevoPago(trat.id,trat.pagos,trat.tipoTratamiento,trat.total)}>Agregar nuevo</button>
             <h4>Total: { trat.total }</h4>
             <hr/>
-            </>
+            </div>
         )}
 
     </div>
