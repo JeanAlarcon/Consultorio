@@ -14,7 +14,7 @@ function Inicio() {
         try {
              await auth.signInWithEmailAndPassword(email,contrasena)
             .then((r)=>{
-                historia.push('/inicio')
+                historia.push('/')
             })
             .catch((err)=>{
                 console.log(err)
