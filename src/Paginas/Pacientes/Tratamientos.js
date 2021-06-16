@@ -7,7 +7,7 @@ import {store} from './../../firebaseconfig'
 function Tratamientos(){
     const { id } = useParams()
     const [tipoTratamiento,settipoTratamiento] = useState('')
-    const [pagos,setPagos] = useState('');
+    const [pagos,setPagos] = useState([]);
     const [total,setTotal] = useState('');
     const [tratamientos,setTratamientos] = useState([]);
     const [nuevoPago, setNuevoPAgo] = useState('');
