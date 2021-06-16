@@ -47,12 +47,12 @@ const GrupoInput = styled.div`
 const Input = styled.input`
     width: 100%;
     background: #fff;
-    border-radius: 3px;
+    border-radius: 10px;
     height: 45px;
     line-height: 45px;
     padding: 0 40px 0 10px;
     transition: .3s ease all;
-    border: 3px solid transparent;
+    border: 3px solid #00BFFF;
 
     &:focus {
         border: 3px solid ${colores.borde};
