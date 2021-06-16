@@ -11,26 +11,21 @@ const App = () => {
   const [apellido, cambiarApellido] = useState({campo: '', valido: null});
   const [edad, cambiarEdad] = useState({campo: '', valido: null});
   const [direccion, cambiarDireccion] = useState({campo: '', valido: null});
+  const [municipio, cambiarMunicipio] = useState({campo: '', valido: null});
+  const [region, cambiarRegion] = useState({campo: '', valido: null});
   const [correo, cambiarCorreo] = useState({campo: '', valido: null});
   const [telefono, cambiarTelefono] = useState({campo: '', valido: null});
   const [terminos, cambiarTerminos] = useState({});
   const [formularioValido, cambiarFormularioValido] = useState(null);
 
   const expresiones = {
-    direccion: /^[a-zA-Z0-9\s\-.,#]{1,40}$/, // Letras, numeros, guion_bajo y signo gato
+    direccion: /^[a-zA-Z0-9\s\-.,#,/]{1,40}$/, // Letras, numeros, guion_bajo, signo gato y diagonal
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
     //password: /^.{4,12}$/, // 4 a 12 digitos.
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     telefono: /^[0-9\s-]{10,14}$/, // 10 a 14 numeros.
     edad: /^[0-9]{1,2}$/ // 1 a 2 numeros.
   }
-
-  //const handleChecked = async (e) => {
-    //cambiarTerminos({
-      //...terminos,
-      //[e.target.name] : e.target.checked
-    //});
-  //}
 
   const handleChecked = async (e) => {
     const {name, value} = e.target;
@@ -49,7 +44,8 @@ const App = () => {
       apellido.valido === 'true' &&
       edad.valido === 'true' &&
       direccion.valido === 'true' &&
-      correo.valido === 'true' &&
+      municipio.valido === 'true' &&
+      region.valido === 'true' &&
       telefono.valido === 'true' 
       
     ){
@@ -58,6 +54,8 @@ const App = () => {
       cambiarApellido({campo: '', valido: null});
       cambiarEdad({campo: '', valido: null});
       cambiarDireccion({campo: '', valido: null});
+      cambiarMunicipio({campo: '', valido: null});
+      cambiarRegion({campo: '', valido: null});
       cambiarCorreo({campo: '', valido: null});
       cambiarTelefono({campo: '', valido: null});
       cambiarTerminos(false);
@@ -68,6 +66,8 @@ const App = () => {
         apellido: apellido.campo,
         edad: edad.campo,
         direccion: direccion.campo,
+        municipio: municipio.campo,
+        region: region.campo,
         correo: correo.campo,
         telefono: telefono.campo,
         terminos: terminos,
@@ -93,7 +93,7 @@ const App = () => {
               cambiarEstado = {cambiarNombre}
               tipo = "text"
               label = "Nombre"
-              placeholder = "Nombre"
+              placeholder = "nombre"
               name = "nombre"
               leyendaError = "Debes utilizar solo letras"
               expresionRegular = {expresiones.nombre}
@@ -103,8 +103,8 @@ const App = () => {
               estado = {apellido}
               cambiarEstado = {cambiarApellido}
               tipo = "text"
-              label = "Apellido"
-              placeholder = "Apellido"
+              label = "Apellidos"
+              placeholder = "apellidos"
               name = "apellido"
               leyendaError = "Debes utilizar solo letras"
               expresionRegular = {expresiones.nombre}
@@ -113,24 +113,47 @@ const App = () => {
           <ComponenteInput
               estado = {edad}
               cambiarEstado = {cambiarEdad}
-              tipo = "text"
-              label = "Edad"
-              placeholder = "Edad"
-              name = "edad"
+              tipo = "date"
+              label = "Fecha de nacimiento"
+              placeholder = "fecha"
+              name = "fecha"
               leyendaError = "Debes utilizar solo números"
-              expresionRegular = {expresiones.edad}
+              expresionRegular = {expresiones.direccion}
           />
 
           <ComponenteInput
               estado = {direccion}
               cambiarEstado = {cambiarDireccion}
               tipo = "text"
-              label = "Dirección"
-              placeholder = "Dirección"
+              label = "Domicilio"
+              placeholder = "calle, número y colonia"
               name = "direccion"
               leyendaError = "Debes utilizar letras, números y #"
               expresionRegular = {expresiones.direccion}
           />
+
+          <ComponenteInput
+              estado = {municipio}
+              cambiarEstado = {cambiarMunicipio}
+              tipo = "text"
+              label = "Municipio/Alcaldía"
+              placeholder = "alcaldía"
+              name = "direccion"
+              leyendaError = "Debes utilizar letras"
+              expresionRegular = {expresiones.nombre}
+          />
+
+          <ComponenteInput
+              estado = {region}
+              cambiarEstado = {cambiarRegion}
+              tipo = "text"
+              label = "Ciudad/Estado"
+              placeholder = "ciudad"
+              name = "direccion"
+              leyendaError = "Debes utilizar letras"
+              expresionRegular = {expresiones.nombre}
+          />
+
 
           <ComponenteInput
               estado = {correo}
@@ -161,7 +184,13 @@ const App = () => {
                 />
                 Femenino:
                 <input type="radio" name="genero" value="femenino" id="terminos" onChange={handleChecked}
-                />              
+                />
+                otro:
+                <input type="radio" name="genero" value="otro" id="terminos" onChange={handleChecked}
+                />
+                Prefiero no decirlo:
+                <input type="radio" name="genero" value="omitido" id="terminos" onChange={handleChecked}
+                />                
             </LabelTerminos>  
           </ContenedorTerminos>  
 
@@ -280,7 +309,7 @@ const App = () => {
             </LabelTerminos>
 
             <LabelTerminos>
-              <h5>Ha requerido transfuciones sanguíneas</h5> 
+              <h5>Ha requerido transfusiones sanguíneas</h5> 
             </LabelTerminos> 
             <LabelTerminos htmlFor="pregunta12"> 
               Si
