@@ -18,7 +18,7 @@ function Tratamientos(){
                 const { docs } = await store.collection('pacientes').doc(id).collection('tratamientos').get()
                 const data = docs.map(item =>({id:item.id, ...item.data()}));
                 setTratamientos(data)
-                console.log('tratamientos',tratamientos)
+                //console.log('tratamientos',tratamientos)
             } catch (error) {
                 console.log(error)
             }
@@ -31,7 +31,7 @@ function Tratamientos(){
 
         const tratamiento = {
             tipoTratamiento: tipoTratamiento,
-            pagos:pagos,
+            pagos:[pagos],
             total: total,
         }
 
@@ -45,7 +45,7 @@ function Tratamientos(){
             const tratamientos = {['tratamientos']:trat}
             await store.collection('pacientes').doc(id).set(tratamientos, {merge: true})*/
             const data = await store.collection('pacientes').doc(id).collection('tratamientos').add(tratamiento);
-            console.log('tratamiento agregado',data.data)
+            //console.log('tratamiento agregado',data.data)
             
         } catch (error) {
             console.log(error)
@@ -59,7 +59,7 @@ function Tratamientos(){
         console.log("id",pagos)
         const trat = {
             tipoTratamiento: tipoTratamiento,
-            pagos:pagos+nuevoPago,
+            pagos:[...pagos,nuevoPago],
             total: total,
         }
         const data = store.collection('pacientes').doc(id).collection('tratamientos').doc(idt).set(trat);
@@ -82,7 +82,7 @@ function Tratamientos(){
                 </div>
                 
                 <div className="form-group col-md-3">
-                    <label >Pagos</label>
+                    <label >Pago</label>
                     <input 
                         type="number" 
                         className="form-control" 
@@ -113,11 +113,14 @@ function Tratamientos(){
     {tratamientos.length ?<div className="containerTratamientos">
         <h1>Tratamientos</h1>
         <hr/>
-        {tratamientos.map((trat)=><div className="row col-md-6">
+        {tratamientos.map((trat)=><div className="row col-md-12" key={trat.tipoTratamiento}>
             <h4>Tipo : { trat.tipoTratamiento }</h4>
-            <h4>Pagado: { trat.pagos } Agregar Pago
-            </h4> <input type="number" className="form-control" value={nuevoPago} onChange={(e)=> setNuevoPAgo(e.target.value)}/>
-            <button onClick={(idt,pagos,tipoTratamiento,total)=>addNuevoPago(trat.id,trat.pagos,trat.tipoTratamiento,trat.total)}>Agregar nuevo</button>
+            <h4>Pagos:</h4> 
+            <hr className="soild"/>
+                { trat.pagos.map((pago,index)=> <h4>Pago {index+1}: ${pago} </h4>) } 
+            Agregar Pago
+             <input type="number" className="form-control col-md-4" value={nuevoPago} onChange={(e)=> setNuevoPAgo(e.target.value)}/>
+            <button onClick={(idt,pagos,tipoTratamiento,total)=>addNuevoPago(trat.id,trat.pagos,trat.tipoTratamiento,trat.total)} className="btn btn-danger col-md-4" >Agregar nuevo</button>
             <h4>Total: { trat.total }</h4>
             <hr/>
             </div>
