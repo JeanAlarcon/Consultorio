@@ -39,7 +39,10 @@ function Tratamientos(){
         console.log(tratamiento)
 
         try {
-            const data = await store.collection('pacientes').doc(id).collection('tratamientos').add(tratamiento);
+            await store.collection('pacientes').doc(id).collection('tratamientos').add(tratamiento);
+            const { docs } = await store.collection('pacientes').doc(id).collection('tratamientos').get()
+            const data = docs.map(item =>({id:item.id, ...item.data()}));
+            setTratamientos(data)
             //console.log('tratamiento agregado',data.data)
             
         } catch (error) {
@@ -50,15 +53,17 @@ function Tratamientos(){
         setTotal('')
     }
 
-    const addNuevoPago = (idt,pagos,tipoTratamiento,total) => {
+    const addNuevoPago = async (idt,pagos,tipoTratamiento,total) => {
         console.log("id",pagos)
         const trat = {
             tipoTratamiento: tipoTratamiento,
             pagos:[...pagos,nuevoPago],
             total: total,
         }
-        const data = store.collection('pacientes').doc(id).collection('tratamientos').doc(idt).set(trat);
-
+        store.collection('pacientes').doc(id).collection('tratamientos').doc(idt).set(trat);
+        const { docs } = await store.collection('pacientes').doc(id).collection('tratamientos').get()
+        const data = docs.map(item =>({id:item.id, ...item.data()}));
+        setTratamientos(data)
     }
 
     return(
@@ -108,15 +113,16 @@ function Tratamientos(){
     {tratamientos.length ?<div className="containerTratamientos">
         <h1>Tratamientos</h1>
         <hr/>
-        {tratamientos.map((trat)=><div className="row col-md-12" key={trat.tipoTratamiento}>
+        {tratamientos.map((trat)=><div className="row col-md-12" key={trat.id}>
             <h4>Tipo : { trat.tipoTratamiento }</h4>
+            <hr/>
             <h4>Pagos:</h4> 
-            <hr className="soild"/>
-                { trat.pagos.map((pago,index)=> <h4>Pago {index+1}: ${pago} </h4>) } 
+                { trat.pagos.map((pago,index)=> <h4 key={index}>Pago {index+1}: ${pago} </h4>) } 
             Agregar Pago
              <input type="number" className="form-control col-md-4" value={nuevoPago} onChange={(e)=> setNuevoPAgo(e.target.value)}/>
             <button onClick={(idt,pagos,tipoTratamiento,total)=>addNuevoPago(trat.id,trat.pagos,trat.tipoTratamiento,trat.total)} className="btn btn-danger col-md-4" >Agregar nuevo</button>
-            <h4>Total: { trat.total }</h4>
+            <hr/>
+            <h4>Total: ${ trat.total }</h4>
             <hr/>
             </div>
         )}
