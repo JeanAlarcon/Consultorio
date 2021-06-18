@@ -32,9 +32,11 @@ function Pagina({titulo, entidad}) {
                 const citaRef = store.collection('citas');
                 const query = await citaRef.where('fecha','==',fechaHoy).get();
                 if(!query.empty){
-                    query.forEach(item =>(setFilasf([{id:item.id, ...item.data()}])));
+                    query.forEach(item =>(entidadf.push({id:item.id, ...item.data()})));
+                    //query.forEach(item =>(setFilasf([{id:item.id, ...item.data()}])));
+                    
+                    setFilasf(entidadf)
                     console.log("filas ",filasf.length)
-                    //setFilasf(entidadf)
                     setColumnasf(Object.keys(filas[0]))
                 }else {
                     console.log("consulta con valores vacios");

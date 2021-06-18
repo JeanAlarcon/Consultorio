@@ -7,8 +7,8 @@ import {store} from './../../firebaseconfig'
 function Tratamientos(){
     const { id } = useParams()
     const [tipoTratamiento,settipoTratamiento] = useState('')
-    const [pagos,setPagos] = useState([]);
-    const [total,setTotal] = useState('');
+    const [pagos,setPagos] = useState(0);
+    const [total,setTotal] = useState(0);
     const [tratamientos,setTratamientos] = useState([]);
     const [nuevoPago, setNuevoPAgo] = useState('');
 
@@ -39,11 +39,6 @@ function Tratamientos(){
         console.log(tratamiento)
 
         try {
-            /*const data = await store.collection('tratamientos').add(tratamiento);
-            console.log('tratamiento agregado',data.id)
-            const trat = data.id
-            const tratamientos = {['tratamientos']:trat}
-            await store.collection('pacientes').doc(id).set(tratamientos, {merge: true})*/
             const data = await store.collection('pacientes').doc(id).collection('tratamientos').add(tratamiento);
             //console.log('tratamiento agregado',data.data)
             
