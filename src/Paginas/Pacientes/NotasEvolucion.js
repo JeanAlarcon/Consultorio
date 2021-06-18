@@ -56,7 +56,7 @@ function NotasEvolucion(){
                 <div className="form-group col-md-12">
                     <textarea 
                         className="form-control" 
-                        placeholder="Descripcionde la nota"
+                        placeholder="Descripcion de la nota"
                         value={Nota}
                         onChange={(e)=> setNota(e.target.value)}
                     />
@@ -78,7 +78,6 @@ function NotasEvolucion(){
             <hr/>
             <h4>Descripcion</h4>
             <h4>{ nota.nota }</h4>
-            <hr/>
             </div>
         )}
 
