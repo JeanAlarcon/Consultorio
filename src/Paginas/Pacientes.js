@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { store } from "../firebaseconfig";
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faIdCardAlt,faFileMedical, faUser, faTooth} from '@fortawesome/free-solid-svg-icons'
+import {faIdCardAlt,faFileMedical, faUser, faTooth, faNotesMedical} from '@fortawesome/free-solid-svg-icons'
 
 function Pacientes({titulo, entidad}) {
     const [filasf,setFilasf] = useState([]);
@@ -32,6 +32,7 @@ function Pacientes({titulo, entidad}) {
                             <Link to={`/Pacientes/informacion/${fila.id}`} className="btn "><FontAwesomeIcon icon={faUser}/> Ver paciente</Link>
                             <Link to={`/Pacientes/historial/${fila.id}`} className="btn "><FontAwesomeIcon icon={faFileMedical}/> Historial Clinico</Link>
                             <Link to={`/Pacientes/tratamientos/${fila.id}`} className="btn "><FontAwesomeIcon icon={faTooth}/> Tratamientos</Link>    
+                            <Link to={`/Pacientes/notas/${fila.id}`} className="btn "><FontAwesomeIcon icon={faNotesMedical}/> Notas evolución</Link>    
 
                         </div>
                   </div>

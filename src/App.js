@@ -12,6 +12,7 @@ import Historial from "./Paginas/Pacientes/Historial"
 import Tratamientos from "./Paginas/Pacientes/Tratamientos"
 import especialidades from "./Paginas/Tratamientos"
 import Nosotros from "./Paginas/Nosotros"
+import notasEvolucion from "./Paginas/Pacientes/NotasEvolucion"
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -42,6 +43,8 @@ function App() {
             <Route path='/Pacientes/informacion/:id' exact component={paciente} />
             <Route path='/Pacientes/historial/:id' exact component={Historial} />
             <Route path='/Pacientes/tratamientos/:id' exact component={Tratamientos} />
+            <Route path='/Pacientes/notas/:id' exact component={notasEvolucion} />
+
             <Route path="*">
               <h1>Pagina no encontrada vuelve al Inicio</h1>
             </Route>
