@@ -49,9 +49,8 @@ function NotasEvolucion(){
 
     return(
     <>
-    <div className="containerTratamientos" onSubmit={addNota} >
-        <form>
-            <div className="row">
+    <div className="containerTratamientos col-md-12 mx-auto">
+        <form onSubmit={addNota}>
                 <h1>Nueva nota de evolución</h1>
                 <div className="form-group col-md-12">
                     <textarea 
@@ -60,9 +59,6 @@ function NotasEvolucion(){
                         value={Nota}
                         onChange={(e)=> setNota(e.target.value)}
                     />
-                </div>
-                
-                
                 <div className="col">
                     <input type="submit" className="btn btn-danger col-md-3" value="Agregar" />
                 </div>
@@ -70,14 +66,15 @@ function NotasEvolucion(){
         </form>
     </div>
 
-    {Notas.length ?<div className="containerTratamientos">
-        <h1>Notas de evolucion</h1>
+    {Notas.length ?<div className="containerTratamiento">
+        <h1 className="tituloT">Notas de evolucion</h1>
         <hr/>
-        {Notas.map((nota)=><div className="row col-md-12" key={nota.id}>
+        {Notas.map((nota)=><div className="row col-md-6" key={nota.id}>
             <h4>Fecha : { nota.fecha }</h4>
             <hr/>
             <h4>Descripcion</h4>
             <h4>{ nota.nota }</h4>
+            <hr/>
             </div>
         )}
 
