@@ -72,7 +72,6 @@ function NotasEvolucion(){
         {Notas.map((nota)=><div className="row col-md-12" key={nota.id}>
             <div className="col-md-4">
             <h4>Fecha : { nota.fecha }</h4>
-            <hr/>
             </div>
             <div className="col-md-8">
                 <h4>Descripcion</h4>
