@@ -69,12 +69,16 @@ function NotasEvolucion(){
     {Notas.length ?<div className="containerTratamiento">
         <h1 className="tituloT">Notas de evolucion</h1>
         <hr/>
-        {Notas.map((nota)=><div className="row col-md-6" key={nota.id}>
+        {Notas.map((nota)=><div className="row col-md-12" key={nota.id}>
+            <div className="col-md-4">
             <h4>Fecha : { nota.fecha }</h4>
             <hr/>
-            <h4>Descripcion</h4>
-            <h4>{ nota.nota }</h4>
-            <hr/>
+            </div>
+            <div className="col-md-8">
+                <h4>Descripcion</h4>
+                <h4>{ nota.nota }</h4>
+                <hr/>
+            </div>    
             </div>
         )}
 
