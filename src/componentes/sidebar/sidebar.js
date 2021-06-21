@@ -5,7 +5,7 @@ import { useAuth } from "./../../contextos/ContextoAuth"
 
 function Sidebar() {
     const { usuario } = useAuth();
-    console.log(usuario)
+    //console.log(usuario)
     
     return ( usuario &&
       <div className="sidebar-container">
