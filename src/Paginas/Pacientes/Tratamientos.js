@@ -68,10 +68,10 @@ function Tratamientos(){
 
     return(
     <>
-    <div className="containerTratamientos" onSubmit={addTratamiento} >
+    <div className="containerTratamientos mx-auto" onSubmit={addTratamiento} >
         <form>
             <div className="row">
-                <h1>Nuevo tratamiento</h1>
+                <h1 className="tituloT">Nuevo tratamiento</h1>
                 <div className="form-group col-md-6">
                     <textarea 
                         className="form-control" 
@@ -110,11 +110,11 @@ function Tratamientos(){
         </form>
     </div>
 
-    {tratamientos.length ?<div className="containerTratamientos">
-        <h1>Tratamientos</h1>
+    {tratamientos.length ?<div className="containerTratamiento col-md-6">
+        <h1 className="tituloT">Tratamiento</h1>
         <hr/>
         {tratamientos.map((trat)=><div className="row col-md-12" key={trat.id}>
-            <h4>Tipo : { trat.tipoTratamiento }</h4>
+            <h4 className="tituloT">Tipo : { trat.tipoTratamiento }</h4>
             <hr/>
             <h4>Pagos:</h4> 
                 { trat.pagos.map((pago,index)=> <h4 key={index}>Pago {index+1}: ${pago} </h4>) } 
