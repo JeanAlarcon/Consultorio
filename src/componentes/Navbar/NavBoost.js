@@ -1,9 +1,24 @@
 import "./Nav.css"
 import logo from "./logo.jpg"
 import { NavLink } from 'react-router-dom'
-
+import { useAuth } from "./../../contextos/ContextoAuth"
+import {auth} from './../../firebaseconfig'
+import {useHistory} from 'react-router-dom';
 
 function NavBoost() {
+  const { usuario } = useAuth();
+  const history = useHistory();
+
+  const cerrarSecion = async ()=> {
+    try {
+      await auth.signOut();
+      history.push('login')
+
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
     return(
         <div className="containerNav">
         <nav className="navbar navbar-expand-lg navbar-light bg-light ">
@@ -33,6 +48,8 @@ function NavBoost() {
             </ul>
             
           </div>
+
+          {usuario ? <button className="btn btn-danger" onClick={cerrarSecion}>Cerrar secion</button>:''}
       </nav>
       </div>
     )

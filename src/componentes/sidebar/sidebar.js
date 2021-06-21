@@ -4,7 +4,6 @@ import "./sidebar.css"
 import { useAuth } from "./../../contextos/ContextoAuth"
 
 function Sidebar() {
-    const [ mostrarPaciente, setMostrarPaciente] = useState(true);
     const { usuario } = useAuth();
     console.log(usuario)
     

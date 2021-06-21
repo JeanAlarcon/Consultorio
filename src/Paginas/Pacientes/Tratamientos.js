@@ -119,7 +119,12 @@ function Tratamientos(){
             <h4>Pagos:</h4> 
                 { trat.pagos.map((pago,index)=> <h4 key={index}>Pago {index+1}: ${pago} </h4>) } 
             Agregar Pago
-             <input type="number" className="form-control col-md-4" value={nuevoPago} onChange={(e)=> setNuevoPAgo(e.target.value)}/>
+            <input 
+                type="number" 
+                className="form-control col-md-4" 
+                value={nuevoPago} onChange={(e)=> 
+                setNuevoPAgo(e.target.value)}
+            />
             <button onClick={(idt,pagos,tipoTratamiento,total)=>addNuevoPago(trat.id,trat.pagos,trat.tipoTratamiento,trat.total)} className="btn btn-danger col-md-4" >Agregar nuevo</button>
             <hr/>
             <h4>Total: ${ trat.total }</h4>

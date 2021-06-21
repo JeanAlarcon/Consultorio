@@ -10,15 +10,17 @@ const useAuth = () => {
 
 const ProovedorAuth = ({children}) => {
     const [usuario,setUsuario] = useState([])
+    const [cargado,setcargado] = useState(false)
     useEffect(() => {
         auth.onAuthStateChanged((usuario) => {
             setUsuario(usuario);
+            setcargado(true)
         })
     },[])
 
     return(
         <ContextoAuth.Provider value={{ usuario: usuario }}>
-            {children}
+            {cargado && children}
         </ContextoAuth.Provider>
         )
 }
