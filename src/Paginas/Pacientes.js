@@ -33,6 +33,7 @@ function Pacientes({titulo, entidad}) {
                             <Link to={`/Pacientes/historial/${fila.id}`} className="btn boton "><FontAwesomeIcon icon={faFileMedical}/> Historial Clinico</Link>
                             <Link to={`/Pacientes/tratamientos/${fila.id}`} className="btn boton "><FontAwesomeIcon icon={faTooth}/> Tratamientos</Link>    
                             <Link to={`/Pacientes/notas/${fila.id}`} className="btn boton "><FontAwesomeIcon icon={faNotesMedical}/> Notas evolución</Link>    
+                            <Link to={`/Pacientes/auxiliar/${fila.id}`} className="btn boton "><FontAwesomeIcon icon={faNotesMedical}/> Auxiliar</Link>    
 
                         </div>
                   </div>

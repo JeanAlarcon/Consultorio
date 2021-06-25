@@ -26,7 +26,7 @@ function NavBoost() {
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                 <NavLink className="navbar-logo" to="/" >
-                    <img src={logo} />
+                    <img src={logo} alt="" />
                 </NavLink>
               <li className="nav-item">
                 <NavLink className="nav-link " aria-current="page" to="/" activeclassname="active" >Inicio</NavLink>
