@@ -43,7 +43,7 @@ function Nosotros(){
                 </div>
 
                 <div className="col-lg-6">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.694617982013!2d-99.03144398569016!3d19.25213645141658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0358cdaa65f5%3A0x5d6ce4d3d1bc8d6!2sLe%C3%B3n%20Jim%C3%A9nez%20%26%20Av.%20de%20las%20Torres%2C%20El%20Carmen%2C%2016720%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1623439258803!5m2!1ses-419!2smx" width="600" height="450" style={{border:0}} allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.694617982013!2d-99.03144398569016!3d19.25213645141658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0358cdaa65f5%3A0x5d6ce4d3d1bc8d6!2sLe%C3%B3n%20Jim%C3%A9nez%20%26%20Av.%20de%20las%20Torres%2C%20El%20Carmen%2C%2016720%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1623439258803!5m2!1ses-419!2smx" width="90%" height="100%" style={{border:0}} allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe>
                 </div>
 
             </div>

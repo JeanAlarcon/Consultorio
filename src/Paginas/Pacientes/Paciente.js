@@ -23,9 +23,9 @@ function Paciente(){
 
     return(
         <div className="pacienteContainer col-lg-12">
-             <div className="row col-lg-12">
+             
             {paciente ?
-                <div className="col-md-offset-10 col-md-10 col-lg-offset-10 col-lg-10">
+                <div className="col-md-offset-10 col-md-12 col-lg-offset-10 col-lg-12">
                     <div className="well profile">
                         <div className="col-sm-15">
                             <div className="col-xs-15 col-sm-12">
@@ -41,7 +41,7 @@ function Paciente(){
                     </div>                 
 		        </div>
             :<h1>Paciente</h1>}
-            </div>
+            
     </div>
     )
 }
