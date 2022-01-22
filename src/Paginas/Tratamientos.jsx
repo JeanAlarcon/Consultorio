@@ -81,6 +81,10 @@ return(
           </div>
         </div>
 
+        <div className="col-lg-12">
+          <br></br>
+        </div>
+
         <div className="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
           <div className="icon-box" data-aos="fade-up" data-aos-delay="400">
             <div className="icon"><FontAwesomeIcon icon={faUser}  /></div>

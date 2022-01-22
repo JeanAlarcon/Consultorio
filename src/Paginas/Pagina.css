@@ -1,5 +1,5 @@
 main{
-    max-width: 800px;
+    /*max-width: 800px;*/
     width: 90%;
     margin: auto;
     padding: 20px 60px;
@@ -30,9 +30,9 @@ main{
     width: 100%;
     height: 80vh;
     background-color: aquamarine;
-    /*background: url("../assets/img/Dentista.jpg") top center;
+    background: url("../assets/img/Dentista.jpg") top center;
         background-attachment: scroll;
-        background-size: auto;*/
+        background-size: auto;
     background-size: cover;
     position: relative;
 }
@@ -64,4 +64,17 @@ p {
 
 .containerPacientes{
     padding-left: 80px;
+}
+
+.Encabezadoprincipal{
+    font-style: normal;
+    color: #db1ae8;
+    font-family: Quicksand;
+}
+
+.EncabezadoprincipalSub{
+    font-style: normal;
+    font-family: Quicksand;
+    font-size: 28px;
+    font-weight: 700;
 }

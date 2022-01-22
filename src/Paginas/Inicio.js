@@ -1,5 +1,6 @@
 import "./Pagina.css"
 import { useAuth } from "./../contextos/ContextoAuth"
+import { NavLink } from 'react-router-dom'
 
 function Inicio() {
     const {usuario} = useAuth();
@@ -7,43 +8,53 @@ function Inicio() {
 
     return (
         
-    <div className="containerInicio">
-         <section id="hero" className="d-flex justify-content-center align-items-center">
+    <div className="d-flex justify-content-center align-items-center">
+        <div className="row col-lg-12">
+         <section id="hero" className="d-flex justify-content-center align-items-center col-lg-8">
+             
             <div className="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-            <h1>Learning Today Leading Tomorrow</h1>
-            <h2>We are team of talented designers making websites with Bootstrap</h2>
-            <a href="courses.html" className="btn-get-started">Get Started</a>
+            <h1 className="Encabezadoprincipal">Visita nuestra clinica dental</h1>
+            <h2 className="EncabezadoprincipalSub">Con nosotros tendras la sonrisa de tus sueños</h2>
+            <NavLink className="btn btn-danger" to="/nuevaCita" >
+                    Haz una cita
+            </NavLink>
             </div>
         </section>
         
 
         <section id="about" className="about">
             <div className="container" data-aos="fade-up">
-
+            <div className="row">
+                    <div className="col-lg-12" data-aos="fade-left" data-aos-delay="100">
+                        <br></br>
+                    </div>
+            </div>
                 <div className="row">
-                <div className="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-                    <img src="assets/img/about.jpg" className="img-fluid" alt=""/>
-                </div>
-                <div className="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-                    <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-                    <p className="fst-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.
-                    </p>
-                    <ul>
-                    <li><i className="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                    <li><i className="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                    <li><i className="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                    </ul>
-                    <p>
-                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    </p>
+                    <div className="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+                        <img src="https://ichef.bbci.co.uk/news/640/amz/worldservice/live/assets/images/2014/10/02/141002173846_sp_dentista_624x351_thinkstock.jpg" className="img-fluid" width="600px" height="400px" alt=""/>
+                    </div>
+                    <div className="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                        <h3>Obtendras atencion de calidad, amable y calificada.</h3>
+                        <p className="fst-italic">
+                        Tenemos varias especialidades para adultos y para niños.
+                        </p>
+                        <ul>
+                        <li><i className="bi bi-check-circle"></i> Ortodoncia.</li>
+                        <li><i className="bi bi-check-circle"></i> Cirugía de terceros molares.</li>
+                        <li><i className="bi bi-check-circle"></i> Odontopediatría.</li>
+                        </ul>
+                        <p>
+                        y mas tratamientos especializados
+                        </p>
 
-                </div>
+                    </div>
                 </div>
 
             </div>
+
         </section>
+        </div>
+        <br></br>
 
     </div>
 

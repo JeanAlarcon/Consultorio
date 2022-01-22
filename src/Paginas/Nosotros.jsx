@@ -5,6 +5,7 @@ import {faMapMarkerAlt, faEnvelope, faPhoneAlt} from '@fortawesome/free-solid-sv
 function Nosotros(){
     return(
     <section id="contact" className="contact">
+         <div className="row col-lg-12">
         <div className="container">
 
             <div className="section-title">
@@ -47,6 +48,7 @@ function Nosotros(){
 
             </div>
 
+        </div>
         </div>
   </section>)
 }
