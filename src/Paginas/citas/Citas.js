@@ -53,7 +53,7 @@ function Pagina({titulo, entidad}) {
 
     return (
         <>
-        <div className="containerCitas mx-auto">
+        <div className="containerCitas mx-auto col-lg-12">
             {(filasf.length > 0 ? <Tabla titulo={titulo} entidad={entidad} columnas={columnasf} filas={filasf} key={entidad}/>
             :<span>No hay citas que mostrar</span>)}
         </div>
