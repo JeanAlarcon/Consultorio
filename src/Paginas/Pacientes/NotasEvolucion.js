@@ -50,7 +50,7 @@ function NotasEvolucion(){
     return(
     <>
     <div className="containerTratamientos col-md-12 mx-auto">
-        <form onSubmit={addNota}>
+        <form className="formtratamientos" onSubmit={addNota}>
                 <h1>Nueva nota de evolución</h1>
                 <div className="form-group col-md-12">
                     <textarea 

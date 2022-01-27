@@ -69,7 +69,7 @@ function Tratamientos(){
     return(
     <>
     <div className="containerTratamientos mx-auto" onSubmit={addTratamiento} >
-        <form>
+        <form className="formtratamientos" >
             <div className="row">
                 <h1 className="tituloT">Nuevo tratamiento</h1>
                 <div className="form-group col-md-6">

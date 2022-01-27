@@ -1,9 +1,9 @@
 .containerHistorial {
-    /*width: 600px;
+    width: 50%;
     margin: 10px auto;
-    background: #ffffff;*/
+    background: #ffffff;
     box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-    padding: 40px 55px ;
+    padding: 40px 250px ;
     border-radius: 15px;
     transition: all .3s;
 }
@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 .containerTratamiento {
     margin: 10px auto;
     box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-    padding: 40px 55px ;
+    padding: 40px 200px ;
     transition: all .3s;
 }
 
@@ -45,6 +45,10 @@ h1, h2, h3, h4, h5, h6 {
 .containerAuxiliar {
     margin: 10px auto;
     box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-    padding: 40px 55px ;
+    padding: 40px 200px ;
     transition: all .3s;
+}
+
+.formtratamientos {
+    padding: 10px 200px;
 }
