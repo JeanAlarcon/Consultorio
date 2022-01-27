@@ -16,6 +16,7 @@
     padding: 40px 55px ;
     transition: all .3s;
     font-family: "Raleway", sans-serif;
+    z-index: 2;
 }
 
 h1, h2, h3, h4, h5, h6 {

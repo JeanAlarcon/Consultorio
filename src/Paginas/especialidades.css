@@ -1,6 +1,6 @@
 .containerEspecialidades{
-    padding: 30px;
-
+    padding: 30px 180px;
+    z-index: 2;
 }
 
 .featured-services .icon-box {

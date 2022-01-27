@@ -6,9 +6,9 @@ main{
 }
 
 .card{
-    width: 18rem;
+    width: 25rem;
     border-radius: 12px;
-    padding: 20px 50px;
+    padding: 20px 100px;
     box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
     overflow: hidden;
     position: relative;
@@ -63,12 +63,12 @@ p {
 }
 
 .containerPacientes{
-    padding-left: 80px;
+    padding: 30px 180px;;
 }
 
 .Encabezadoprincipal{
     font-style: normal;
-    color: #db1ae8;
+    color: #c108ce;
     font-family: Quicksand;
 }
 
